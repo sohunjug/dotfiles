@@ -1,0 +1,10 @@
+#!/bin/bash
+
+flag=$(uptime | awk '{ print $4 }' | sed 's/,//g')
+if [[ flag -eq "day" ]]; then
+    echo $(uptime | awk '{ print $3":"$5 }' | sed 's/,//g')
+    echo $(uptime | awk '{ print $3":"$5 }' | sed 's/,//g')
+else
+    echo "$(uptime | awk '{print $3}' | sed 's/,//g') "
+    echo "$(uptime | awk '{print $3}' | sed 's/,//g') "
+fi

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+killall -q polybar
+
+unset GDK_SCALE
+unset GDK_DPI_SCALE
+while pgrep -x polybar >/dev/null; do sleep 0.5; done
+
+# Launch top bar
+sleep 0.5
+polybar top 2> /dev/null &
+polybar bottom 2> /dev/null &

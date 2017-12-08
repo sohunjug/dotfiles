@@ -1,0 +1,1 @@
+['syntax', 'proto3', 'package', 'bizware', 'message', 'Person', 'int32', 'groupid', 'string', 'keyvalue', 'data']

@@ -1,0 +1,134 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "vim.visualstar": true,
+    "vim.enableNeovim": true,
+    "files.associations": {
+        "*.kkf2": "lua",
+        "*.inc": "c"
+    },
+    "vim.useCtrlKeys": true,
+    "vim.leader": ";",
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false,
+    "files.autoGuessEncoding": true,
+    "files.eol": "\n",
+    "files.autoSave": "off",
+    "workbench.colorTheme": "Monokai Dimmed",
+    "fileheader.Author": "sohunjug",
+    "fileheader.LastModifiedBy": "sohunjug",
+    "git.confirmSync": false,
+    "extensions.autoUpdate": false,
+    "clang-format.style": "{ BasedOnStyle: Google, IndentWidth: 4, AlignTrailingComments: true, SpaceAfterCStyleCast: true}",
+    //"clang-format.executable": "C:\\Program Files\\LLVM\\bin\\clang-format.exe",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": ":nohl"
+                }
+            ]
+        },
+        {
+            "before": [
+                "Z",
+                "Z"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                },
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "w"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "q"
+            ],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "j"
+            ],
+            "after": [
+                "1",
+                "0",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "k"
+            ],
+            "after": [
+                "1",
+                "0",
+                "k"
+            ]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-c>": false
+    },
+    "vim.easymotion": true,
+    "vim.startInInsertMode": true,
+    "sync.gist": "ca8d34806b4ab8d634c30741941ee2ad",
+    "sync.lastUpload": "2017-12-08T18:01:21.143Z",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "",
+    "sync.forceDownload": false,
+    "sync.anonymousGist": false,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "sync.quietSync": false,
+    "sync.askGistName": false,
+    "git.enableSmartCommit": true,
+    "material-icon-theme.showUpdateMessage": false,
+    "editor.fontSize": 13,
+    "editor.fontFamily": "'Source Code Pro','Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'"
+}

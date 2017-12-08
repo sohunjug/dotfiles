@@ -1,0 +1,1 @@
+['Copyright', 'Alan', 'McIntyre', 'class', 'KeyData', 'object', '__init__', 'self', 'secret', 'KeyHandler', 'filename', 'None', 'given', 'file', 'assumed', 'text', 'with', 'lines', '_keys', 'open', 'while', 'True', 'readline', 'strip', 'break', 'addKey', '@property', 'keys', 'return', 'list', 'getKeys', 'save', 'data', 'items', 'write', 'getSecret', 'raise', 'Exception', 'found']

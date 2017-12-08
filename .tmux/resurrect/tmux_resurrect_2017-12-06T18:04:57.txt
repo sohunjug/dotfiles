@@ -1,0 +1,4 @@
+pane	sohunjug	1	:~	1	:*	0	:/home/sohunjug	0	zsh	:
+pane	sohunjug	1	:~	1	:*	1	:/home/sohunjug	1	zsh	:
+window	sohunjug	1	1	:*	bee7,234x57,0,0{116x57,0,0,0,117x57,117,0,1}
+state	sohunjug	

@@ -1,0 +1,777 @@
+#!/bin/sh
+
+iterate()
+{
+	"$@" NF b29c0845cfd8eb68f25dd58c624c161f lib/opera/gstreamer/LGPL.txt
+	"$@" NF 73659016adcaf3ee98af1b956145e21f lib/opera/gstreamer/README.txt
+	"$@" NF 2b7ea5781758b16c589d77514f31fc08 lib/opera/gstreamer/plugins/libgstoperamatroska.so
+	"$@" NF 1a89c3763496eeeada5ae1f1f8370f88 lib/opera/gstreamer/plugins/libgstoperavp8.so
+	"$@" NF d29cf75283b20aaa8abcc00ed5c3a829 lib/opera/liboperagtk.so
+	"$@" NF f31f211e6acb30aa36da670f1937e42c lib/opera/liboperakde4.so
+	"$@" NX cbff8bfd9f7f7b550f495977f0a0a222 lib/opera/opera
+	"$@" NX d1cd634fd051fc976fc365ff17dfb340 lib/opera/operaplugincleaner
+	"$@" NX bc7331102ef434f19e5a275de153af66 lib/opera/operapluginwrapper
+	"$@" NX d521287e15a408ac6f3603666a4cdfac lib/opera/operapluginwrapper-ia32-linux
+	"$@" NX fcff0b89a083ff22eb96df87079d2a16 lib/opera/operapluginwrapper-native
+	"$@" NF 0a8389b127c477aa2c55ee5d234473ca lib/opera/plugins/README
+	"$@" PF 3555a0be840d98b449faf459b8900f93 share/applications/opera-browser.desktop
+	"$@" PF c32d6b1cdaa99944767e83a59fe27b4d share/applications/opera-widget-installer.desktop
+	"$@" PF bf9c8c97f9432e69936000fc9db64290 share/applications/opera-widget-manager.desktop
+	"$@" NF 3214f080875748938ba060314b4f727d share/doc/opera/LGPL-2
+	"$@" NF 6a6a8e020838b23406c81b19c1d46df6 share/doc/opera/LGPL-3
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/doc/opera/LICENSE
+	"$@" NF e86ae7a20a7bc688af75a10d628de734 share/icons/hicolor/128x128/apps/opera-browser.png
+	"$@" NF a8364412e16fd47998b58733e5a17ce6 share/icons/hicolor/128x128/apps/opera-widget-manager.png
+	"$@" NF e67a11f466869d45bda53bdc9dbf4820 share/icons/hicolor/128x128/mimetypes/opera-unite-application.png
+	"$@" NF a2ae615b486e32092225f672d436d799 share/icons/hicolor/128x128/mimetypes/opera-widget.png
+	"$@" NF c3a9608cefc210c9e7823389c880a846 share/icons/hicolor/16x16/apps/opera-browser.png
+	"$@" NF 63786cc7701894e2ed1cecad31f2f78e share/icons/hicolor/16x16/apps/opera-widget-manager.png
+	"$@" NF 87a4cd99f0b1be41a1f6cfda5d57858a share/icons/hicolor/16x16/mimetypes/opera-unite-application.png
+	"$@" NF 2bf861fe626ecd8480ed4f4b1d4f6086 share/icons/hicolor/16x16/mimetypes/opera-widget.png
+	"$@" NF 6ed751290abb1877dc5f63d98d519388 share/icons/hicolor/22x22/apps/opera-browser.png
+	"$@" NF a385010faaf3f4474e179b3e31e7dc4c share/icons/hicolor/22x22/apps/opera-widget-manager.png
+	"$@" NF 96f5a6bb62249a96b18a21e2620dcaf5 share/icons/hicolor/22x22/mimetypes/opera-unite-application.png
+	"$@" NF a9c3ccc0b72ab3af8abd7e340e3c9918 share/icons/hicolor/22x22/mimetypes/opera-widget.png
+	"$@" NF 69ec92d70839774813d2b947b64b6c47 share/icons/hicolor/24x24/apps/opera-browser.png
+	"$@" NF 18da329a213cc3c61f44fe570d7fafe5 share/icons/hicolor/24x24/apps/opera-widget-manager.png
+	"$@" NF 5de5a30096324d2fb9d48928d49912c3 share/icons/hicolor/24x24/mimetypes/opera-unite-application.png
+	"$@" NF 8252fceede693440b96be35f6065cde3 share/icons/hicolor/32x32/apps/opera-browser.png
+	"$@" NF 7d64048682c5ea906e7ea281f4f12442 share/icons/hicolor/32x32/apps/opera-widget-manager.png
+	"$@" NF 7d861375334ea90d50f01bd84720f54e share/icons/hicolor/32x32/mimetypes/opera-unite-application.png
+	"$@" NF 70b287cbe7a06465220692a15c9b9c13 share/icons/hicolor/32x32/mimetypes/opera-widget.png
+	"$@" NF d0b315ea05750c1abb157042e56165d2 share/icons/hicolor/48x48/apps/opera-browser.png
+	"$@" NF 6177835f1655a6a1441ebefe49f404ff share/icons/hicolor/48x48/apps/opera-widget-manager.png
+	"$@" NF 4e4670e50dc2cb2305abd6f526a82099 share/icons/hicolor/48x48/mimetypes/opera-unite-application.png
+	"$@" NF 6471746ab02f81f91b2e08fc95db4aa4 share/icons/hicolor/48x48/mimetypes/opera-widget.png
+	"$@" NF 52440fbe31989de381a04002fe54da6e share/icons/hicolor/scalable/apps/opera-browser.svg
+	"$@" NF 5a01f0263e5ad8efbc725a53652a0cc3 share/icons/hicolor/scalable/apps/opera-widget-manager.svg
+	"$@" NF ce8e498331bac7751149b7012e5c39ee share/icons/hicolor/scalable/apps/opera-widget.svg
+	"$@" NF 957818c8871b44f4b490a51f90134fa5 share/icons/hicolor/scalable/mimetypes/opera-unite-application.svg
+	"$@" PF 3cfe0ad395ef54bf7d577b9cd6b3992b share/man/man1/opera-widget-manager.1.gz
+	"$@" PF b938e8136745a81ae3fd470ad6568698 share/man/man1/opera.1.gz
+	"$@" PF 47369d7a10b56a444f3ff3cadfcfc68f share/mime/packages/opera-unite-application.xml
+	"$@" PF 7744597b45c1ee17ad5e62adc5856a40 share/mime/packages/opera-widget.xml
+	"$@" NF e5f8a1eed17db1d05738ea806c7da267 share/opera/defaults/bookmarks.adr
+	"$@" NF 47c08d6696bb0c85d176ee56ff9bd2c7 share/opera/defaults/feedreaders.ini
+	"$@" NF eff00befe1723a4742b9ae591170566c share/opera/defaults/filehandler.ini
+	"$@" NF c8da3f671c192d7193d2c04e41586fea share/opera/defaults/font.ini
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/defaults/license.txt
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/defaults/license.txt
+	"$@" NF 8574717ed37e3e1a9bbf41d9e0b12616 share/opera/defaults/mailproviders.xml
+	"$@" NF 0cb4ac60c1cf45bd08ec4d5d62da5c02 share/opera/defaults/plugin-ignore.ini
+	"$@" NF 0fdbbea86cf8d337071056e5403c9333 share/opera/defaults/pluginpath.ini
+	"$@" NF 04c5466c3021c5348ff0b3bd91487774 share/opera/defaults/public_domains.dat
+	"$@" NF 4a61ad3cccbe6b70d351d5d0d9dac77d share/opera/defaults/search.ini
+	"$@" NF c600239863b61385bb2819032f0fda2a share/opera/defaults/standard_speeddial.ini
+	"$@" NF 999671790c0d7c13942128fc9acf7879 share/opera/defaults/standard_trusted_repositories.ini
+	"$@" NF c98d21788ba4619a0a3bb41722142e45 share/opera/defaults/webmailproviders.ini
+	"$@" NF 5978ba5d3fa29bb0f5b210cc8aad57e1 share/opera/defaults/xmlentities.ini
+	"$@" NF 9ce38cf66412831284ecdfc3bc5c82e9 share/opera/encoding.bin
+	"$@" NF 54f1497ac9cc9ffa04d52213be260559 share/opera/extra/missingplugin.svg
+	"$@" NF 17700f8a405a78dc1afdf69679a3f85b share/opera/extra/missingpluginhover.svg
+	"$@" NF 0547d144b3de633887a8657de0ee1779 share/opera/extra/svg-mo.dat
+	"$@" NF 6ee58550670e206dc93e1b31a7da2c9f share/opera/extra/svg-mobd.dat
+	"$@" NF 0ab7eca84c071dac25dafd3b4569d80f share/opera/extra/svg-sa.dat
+	"$@" NF 23059c42a43dceded9122d8834aa43fe share/opera/extra/svg-sabd.dat
+	"$@" NF f3747a59108df781e04305b1bee29574 share/opera/extra/svg-se.dat
+	"$@" NF bcdb530c010ed72fe6096d46366c57f5 share/opera/extra/svg-sebd.dat
+	"$@" NF 7a2db2de5211ab16a6712e4168d17ec7 share/opera/html40_entities.dtd
+	"$@" NF 87803f0514670b96c73d4043cd3568c8 share/opera/lngcode.txt
+	"$@" NF af39340ec884f1a762b6cfef55b8e135 share/opera/locale/be/be.lng
+	"$@" NF 19a88943998948a20598ebe4dce9b898 share/opera/locale/be/bookmarks.adr
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/be/license.txt
+	"$@" NF 2f3c9d71ea6cc8c7ee7a0ae56b0f2ebd share/opera/locale/be/search.ini
+	"$@" NF 8beaab8ab5f5af7f0b9e52b31b35bea1 share/opera/locale/be/standard_speeddial.ini
+	"$@" NF 42910d962326a1fb3335113ce849d61b share/opera/locale/bg/bg.lng
+	"$@" NF fbaacb092f6fb389ba57f810d31792bd share/opera/locale/bg/bookmarks.adr
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/bg/license.txt
+	"$@" NF a14baaa7a62b0181553244bbbcfa6408 share/opera/locale/bg/search.ini
+	"$@" NF d1ed970ff7b137d478bb94301da078e3 share/opera/locale/bg/standard_speeddial.ini
+	"$@" NF 2218692cb6ccf82543756b594f1dd444 share/opera/locale/cs/bookmarks.adr
+	"$@" NF 0bbed03067f25a7a13ab6478c2b47227 share/opera/locale/cs/cs.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/cs/license.txt
+	"$@" NF 4ee0580554e7c1ddc24d609bbb5c7253 share/opera/locale/cs/search.ini
+	"$@" NF d1ed970ff7b137d478bb94301da078e3 share/opera/locale/cs/standard_speeddial.ini
+	"$@" NF eff4337adf03a3eb23d966be60eb2ef5 share/opera/locale/da/da.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/da/license.txt
+	"$@" NF 2abbf8026ccfde44516071ca973fb618 share/opera/locale/de/bookmarks.adr
+	"$@" NF 7e992d42d5a39ef8547ad468890b3cb7 share/opera/locale/de/de.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/de/license.txt
+	"$@" NF 42efa4b67073e9fbf848505d16da9230 share/opera/locale/de/search.ini
+	"$@" NF f81c9efe32b2cfcc6f7a7411a3ead4bd share/opera/locale/de/standard_speeddial.ini
+	"$@" NF 3127c82378150bfc56ecd87854d7d2bb share/opera/locale/el/el.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/el/license.txt
+	"$@" NF de7b89f83721003bbb56d81088565825 share/opera/locale/en-GB/bookmarks.adr
+	"$@" NF d5e9fc8d94c6f266228213781cb612a6 share/opera/locale/en-GB/en-GB.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/en-GB/license.txt
+	"$@" NF f30396861ff9b8243fd13c07dfcfd40a share/opera/locale/en-GB/search.ini
+	"$@" NF 2b71fb390e9c63e6c7384a00e10d49c7 share/opera/locale/en-GB/standard_speeddial.ini
+	"$@" NF 7f5bbe1a291f2a8429b804bc88a2e7c6 share/opera/locale/en/bookmarks.adr
+	"$@" NF 45f413eee2069cdcff34d2e6f32a26ed share/opera/locale/en/en.lng
+	"$@" NF 0669ab3e48692516df50fcc4965c397b share/opera/locale/en/en.zip
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/en/license.txt
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/en/license.txt
+	"$@" NF 598e2213da5c31d1f5caf6f0e08b5033 share/opera/locale/en/search.ini
+	"$@" NF 2b71fb390e9c63e6c7384a00e10d49c7 share/opera/locale/en/standard_speeddial.ini
+	"$@" NF 8cc0d49d5de699a46581f1e9a07c8c90 share/opera/locale/es-ES/bookmarks.adr
+	"$@" NF 970dcbcbb1c965c4cff50c962ca2ae0f share/opera/locale/es-ES/es-ES.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/es-ES/license.txt
+	"$@" NF 885687c32546f37c98d354b3e88fe2a5 share/opera/locale/es-ES/search.ini
+	"$@" NF 45803aa62c61987464904c6c174fa781 share/opera/locale/es-ES/standard_speeddial.ini
+	"$@" NF 14742d663744313cd2f9529ef9de0be7 share/opera/locale/es-LA/es-LA.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/es-LA/license.txt
+	"$@" NF e77d7b922c1d62c157f02950efb19e16 share/opera/locale/et/et.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/et/license.txt
+	"$@" NF c2fedbd328a9fb69d965216e342322b5 share/opera/locale/fi/fi.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/fi/license.txt
+	"$@" NF 4967df16d3d319b67be911ad2f9d0b25 share/opera/locale/fr-CA/fr-CA.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/fr-CA/license.txt
+	"$@" NF 111b339f00ca3b3aca44993f09e4fa03 share/opera/locale/fr/bookmarks.adr
+	"$@" NF 8e5d8e69f1a80714a7d889b7f643d3ec share/opera/locale/fr/fr.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/fr/license.txt
+	"$@" NF b451253b530b6903d2acdd00391107e4 share/opera/locale/fr/search.ini
+	"$@" NF 25d66517b407516c3b53ed4ba8f87d27 share/opera/locale/fr/standard_speeddial.ini
+	"$@" NF 368e2572ea8a483801d77739f1c50b65 share/opera/locale/fy/fy.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/fy/license.txt
+	"$@" NF 36db894f869bb4ed3f3f3d627590695c share/opera/locale/hi/hi.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/hi/license.txt
+	"$@" NF 44030f9176f1e44283a0c4384dea0fef share/opera/locale/hr/hr.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/hr/license.txt
+	"$@" NF bc176094b5455b35042c535de6c99531 share/opera/locale/hu/bookmarks.adr
+	"$@" NF 47b6e6bc462b297c5ff0dd193625c1dc share/opera/locale/hu/hu.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/hu/license.txt
+	"$@" NF f31b046abc9de096d99a4478a500ee3b share/opera/locale/hu/search.ini
+	"$@" NF c6010c21e9a4c1fce19c9296ca5d2593 share/opera/locale/hu/standard_speeddial.ini
+	"$@" NF 978f794b06564b5df18ca4d6dbde28cf share/opera/locale/id/id.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/id/license.txt
+	"$@" NF bbd6ee592eb08fa0019f5bf9a95664f7 share/opera/locale/it/bookmarks.adr
+	"$@" NF 4704266f381bee6aff1f8359fa9cb7a8 share/opera/locale/it/it.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/it/license.txt
+	"$@" NF b38f6ccce5e246a77c7a97d2e0fdf7a4 share/opera/locale/it/search.ini
+	"$@" NF 1ffe2ccf842d816a577edab81a374a5c share/opera/locale/it/standard_speeddial.ini
+	"$@" NF 5e87f4e8391f055ffce6fbf64ae0d542 share/opera/locale/ja/bookmarks.adr
+	"$@" NF df4424766a3f69cbd3283965f8e14ace share/opera/locale/ja/ja.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/ja/license.txt
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/ja/license.txt
+	"$@" NF 88fa821195cec2a4a3aa9cb3bafe50de share/opera/locale/ja/search.ini
+	"$@" NF e241ecfa93beebc6c7e13d3ff7088f2a share/opera/locale/ja/standard_speeddial.ini
+	"$@" NF ebaf86c1ff09385675f9708b934a8ef6 share/opera/locale/ka/ka.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/ka/license.txt
+	"$@" NF a2bcc11fb32949d8148b24529d2fc52f share/opera/locale/ko/ko.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/ko/license.txt
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/lt/license.txt
+	"$@" NF 9df3711491ecdb4a8705d242c4d02e91 share/opera/locale/lt/lt.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/mk/license.txt
+	"$@" NF 82b95f5bd591fd87a269ac023c2f57eb share/opera/locale/mk/mk.lng
+	"$@" NF 1be92569b91543f3e5048bd2da8761a9 share/opera/locale/nb/bookmarks.adr
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/nb/license.txt
+	"$@" NF d802afe20dc9456576a01aee48aefeb5 share/opera/locale/nb/nb.lng
+	"$@" NF c6ea0dcda91384043d5231bd81da4532 share/opera/locale/nb/search.ini
+	"$@" NF e5ebff2e5dc9b5cf95150b9c09031c8a share/opera/locale/nb/standard_speeddial.ini
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/nl/license.txt
+	"$@" NF 6a4b91bca3b580038f1d627bf03ebbf4 share/opera/locale/nl/nl.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/nn/license.txt
+	"$@" NF d8f39170a3e6031ca5aeacbf2cd056fb share/opera/locale/nn/nn.lng
+	"$@" NF 659304a56668ac7dcda7d5ad537ac8ff share/opera/locale/pl/bookmarks.adr
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/pl/license.txt
+	"$@" NF fc9f309591557dd32b3536feb8b2a8ea share/opera/locale/pl/pl.lng
+	"$@" NF e633ed82cd51753eb6368867d94b2eca share/opera/locale/pl/search.ini
+	"$@" NF 76608f743a2c4c2964f8b05b76a6cd0a share/opera/locale/pl/standard_speeddial.ini
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/pt-BR/license.txt
+	"$@" NF 7770f25cb087b9285f1d772a80ef9950 share/opera/locale/pt-BR/pt-BR.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/pt/license.txt
+	"$@" NF dee3ed8d19f503e659e55924e7eb6c29 share/opera/locale/pt/pt.lng
+	"$@" NF 7b95d32fd40dfb0471a9badd405abefc share/opera/locale/ro/bookmarks.adr
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/ro/license.txt
+	"$@" NF 72fe50d23b452740386f0c3e728659ab share/opera/locale/ro/ro.lng
+	"$@" NF 2824879f1758a036c151aca0895cc2b5 share/opera/locale/ro/search.ini
+	"$@" NF d1ed970ff7b137d478bb94301da078e3 share/opera/locale/ro/standard_speeddial.ini
+	"$@" NF d94fca69ab135306e4c3bc2775fd0f7f share/opera/locale/ru/bookmarks.adr
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/ru/license.txt
+	"$@" NF 5e9488ade029018e63d826452daddc22 share/opera/locale/ru/ru.lng
+	"$@" NF 0245db6326d69ca4324c62030caa0786 share/opera/locale/ru/search.ini
+	"$@" NF 8beaab8ab5f5af7f0b9e52b31b35bea1 share/opera/locale/ru/standard_speeddial.ini
+	"$@" NF 00143eebb2330e52ae4ec7d2dd881a8a share/opera/locale/sk/bookmarks.adr
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/sk/license.txt
+	"$@" NF aa0deb1d50185ee1d792c4b5a302a526 share/opera/locale/sk/search.ini
+	"$@" NF 0234a5b82806d15e8e9242b0941eb58e share/opera/locale/sk/sk.lng
+	"$@" NF d1ed970ff7b137d478bb94301da078e3 share/opera/locale/sk/standard_speeddial.ini
+	"$@" NF 4b674679dcc365056133fc7d34ba87f3 share/opera/locale/sr/bookmarks.adr
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/sr/license.txt
+	"$@" NF b9cc80f70dd1090381957288d1fbe930 share/opera/locale/sr/search.ini
+	"$@" NF fa3b5ad4c7eb00b49a954664d9ccf19e share/opera/locale/sr/sr.lng
+	"$@" NF d1ed970ff7b137d478bb94301da078e3 share/opera/locale/sr/standard_speeddial.ini
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/sv/license.txt
+	"$@" NF bfc6beb08df78e55545cec53b5fbcc10 share/opera/locale/sv/sv.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/ta/license.txt
+	"$@" NF 7b6f8fe46cc675bf6fc4ac23ceada845 share/opera/locale/ta/ta.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/te/license.txt
+	"$@" NF 501e179edd8ba0cddbe00b5fd2a5a6c2 share/opera/locale/te/te.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/tr/license.txt
+	"$@" NF 623deef778bf5d28d62b8b182010f5cf share/opera/locale/tr/tr.lng
+	"$@" NF c37440a5621ea20a11cef2629b591464 share/opera/locale/uk/bookmarks.adr
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/uk/license.txt
+	"$@" NF 1dcd633858fbb62293f9d4f5c25f5db2 share/opera/locale/uk/search.ini
+	"$@" NF 8beaab8ab5f5af7f0b9e52b31b35bea1 share/opera/locale/uk/standard_speeddial.ini
+	"$@" NF 7b0ff355b4607d3e81cb15a91c544a0b share/opera/locale/uk/uk.lng
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/vi/license.txt
+	"$@" NF 4401ca9d44168991b5ff027d221ebc68 share/opera/locale/vi/vi.lng
+	"$@" NF 8e809f73f283b7e60d934753d9120b0e share/opera/locale/zh-cn/bookmarks.adr
+	"$@" NF 0b9bccfadaa392d0f1b016dbf926f73b share/opera/locale/zh-cn/browser.js
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/zh-cn/license.txt
+	"$@" NF 4166838cc06fd3594b5f01cce030dd95 share/opera/locale/zh-cn/search.ini
+	"$@" NF fa3dcf7fa65c11de3faa0f4fe6319ef2 share/opera/locale/zh-cn/standard_speeddial.ini
+	"$@" NF d44fc31b4c96a97d22624455874764ca share/opera/locale/zh-cn/turbosettings.xml
+	"$@" NF 0e3efdd139ec344bd2e6f33f158ef220 share/opera/locale/zh-cn/zh-cn.lng
+	"$@" NF 0b9bccfadaa392d0f1b016dbf926f73b share/opera/locale/zh-hk/browser.js
+	"$@" NF 6ea2f98cdeaf54c398dca24aea9df644 share/opera/locale/zh-hk/turbosettings.xml
+	"$@" NF 0b9bccfadaa392d0f1b016dbf926f73b share/opera/locale/zh-tw/browser.js
+	"$@" NF 76a5919d1950d5d3171636079f0b3f1b share/opera/locale/zh-tw/license.txt
+	"$@" NF 6ea2f98cdeaf54c398dca24aea9df644 share/opera/locale/zh-tw/turbosettings.xml
+	"$@" NF 8695448706942f14942603492ff3e1f4 share/opera/locale/zh-tw/zh-tw.lng
+	"$@" NF 1c24deadc6027ab1b7a2cecc7b7c00e4 share/opera/mathml.dtd
+	"$@" NF dfc3184eb9e642251d10a95ce104d36a share/opera/package-id.ini
+	"$@" NF a6485d9b7be876314c624d291d6575a1 share/opera/package/lib/binprint.sh
+	"$@" NF e7e881f582f55beb206ee28c694a9a1c share/opera/package/lib/layout_common.sh
+	"$@" NF 45642baaad2a785da620edf0945690ff share/opera/package/lib/layout_deb.sh
+	"$@" NF ef97aabff0bf409a1b8869d34668d727 share/opera/package/lib/layout_tar.sh
+	"$@" NF a8282806a1e3b9bea0f279348f76d4c2 share/opera/package/lib/main.sh
+	"$@" NF 5843ecaae9aad7e1e0f36bc0d245df45 share/opera/package/lib/normalize.sh
+	"$@" NF 324d47f2b5cf6e64fc7b548883527d5f share/opera/package/lib/package_deb.sh
+	"$@" NF f809760b9a5cce32e0dd95e0fd39eb36 share/opera/package/lib/package_rpm.sh
+	"$@" NF 23a7c89f979f1ebaa19d686215419cb7 share/opera/package/lib/package_tar.sh
+	"$@" NF b2a6eb60c20b9329acad9f519ca66ac0 share/opera/package/lib/xml.sh
+	"$@" NX bca998e6f24510a22be340fea94f81f0 share/opera/package/main.sh
+	"$@" NF aa76168c78dbdcfceb932a40d57a3701 share/opera/skin/standard_skin.zip
+	"$@" NF 9481991f5ad478a085b85f059e84c322 share/opera/skin/unix_skin.zip
+	"$@" NF 06820e6bdd581b0a257e5e2648360457 share/opera/styles/about.css
+	"$@" NF 4fb7c857524fd084449266fc70e9288b share/opera/styles/cache.css
+	"$@" NF 8295c14370590319f3f116b0e8b358ec share/opera/styles/certinfo.css
+	"$@" NF f402b8c8fef9a813ed35f6e092ab4850 share/opera/styles/config.css
+	"$@" NF adc83d14afaa0ea76588cf340e36c3a5 share/opera/styles/contentblock.css
+	"$@" NF 3ddaf96398ae99245f6b83e6dc676ac6 share/opera/styles/debug.css
+	"$@" NF 056873687942e8aad4f0f297c1d4a57b share/opera/styles/dir.css
+	"$@" NF fb8d712239bbe69e40c6c213f4fb47a2 share/opera/styles/error.css
+	"$@" NF e9ee42b5c66c0367c1e02a1eeeca0776 share/opera/styles/history.css
+	"$@" NF 3313969be29b130922a2551034194d42 share/opera/styles/im.css
+	"$@" NF c8723eaa9387b79cf23f8f49c8bdb5b3 share/opera/styles/image.css
+	"$@" NF 73b840d67b16a49008b7ed3d6aec38ab share/opera/styles/images/Opera_256x256.png
+	"$@" NF 35a8968b802c4cd66f70631354cec397 share/opera/styles/images/bar.png
+	"$@" NF 2e242ddd9c9679c584b0fe430b8948cf share/opera/styles/images/bkgd-rev.png
+	"$@" NF b133b79753e118bafa077c594ed22724 share/opera/styles/images/bkgd.png
+	"$@" NF 4289d8db3e0ad4cb825d34c969c142ff share/opera/styles/images/bullet.png
+	"$@" NF cbdbb7032558dae6b04f7691c4b8a41a share/opera/styles/images/center.png
+	"$@" NF f23a4e2a5c1a0db7cfac79d1e7b9ba23 share/opera/styles/images/corner.png
+	"$@" NF b423f4149c868ccf56a15abb83228f09 share/opera/styles/images/customize.gif
+	"$@" NF e715da6d7e5314261bdff2942251718a share/opera/styles/images/darkBox.png
+	"$@" NF 0dfc37ae4404b4a6811e4876db6b7df1 share/opera/styles/images/defaultFavicon.png
+	"$@" NF 71bbdb354d7e65183c86aa36a27ddd1d share/opera/styles/images/error.png
+	"$@" NF ac4455a870ed9d5365377c2d9566240c share/opera/styles/images/file.png
+	"$@" NF 86c6ac920bd2fbb7f538ff79d4e34395 share/opera/styles/images/flag.png
+	"$@" NF c6ee6872a8d70dbec976edd11bdaf986 share/opera/styles/images/folder.png
+	"$@" NF 4412303b131452fd536e794e93bdc8f5 share/opera/styles/images/hanger.png
+	"$@" NF cd587bbd0135bcc9820de23318dbae41 share/opera/styles/images/header-expanded.png
+	"$@" NF 533450be6ceff816d25c53fb8ca93cad share/opera/styles/images/header.png
+	"$@" NF 0c313c9e4b635e06cc9fa61b734ad99b share/opera/styles/images/opera-icon-red.png
+	"$@" NF bfdd24b5079de6de555f5477256a8ed3 share/opera/styles/images/opera-icon-white.png
+	"$@" NF a2ed905f3862c320bb43e866721729d7 share/opera/styles/images/opera.png
+	"$@" NF dbb6d41150a244186500718eda971047 share/opera/styles/images/page-bot.png
+	"$@" NF d58ef56a726e38bb51da5adf696153fc share/opera/styles/images/red_center.png
+	"$@" NF 3c6c895d2519efa918b4b3f46a897b67 share/opera/styles/images/red_left.png
+	"$@" NF a28ba91c09ea75605d727e9bde7771b1 share/opera/styles/images/red_right.png
+	"$@" NF a0c5f8a66f4e25f5d16ca1696a8f2e03 share/opera/styles/images/root.png
+	"$@" NF 4aecd261352501fa1bad2c5e608df556 share/opera/styles/images/search.png
+	"$@" NF b641cb9df6a4065ec64e6aac43cd5bc8 share/opera/styles/images/section.png
+	"$@" NF 62f6287d95fafa0a8c56287e41760f33 share/opera/styles/images/smartGroup.png
+	"$@" NF 2dab1572b02772c7a4fea3b5d51d1c48 share/opera/styles/images/tooltiptail.png
+	"$@" NF f4dbc8a7b78e98448ad509bedca371c1 share/opera/styles/images/top.png
+	"$@" NF 074b5a2c5386b6f2d12d172aa2f349fa share/opera/styles/images/warning.png
+	"$@" NF fb7897053fcb415e726c0b3ae1731749 share/opera/styles/info.css
+	"$@" NF e521ce4a0e2ad947af55f2fec3e30aee share/opera/styles/m2_welcome_message.mbs
+	"$@" NF 174c0ece627639181db1815bff4f2f06 share/opera/styles/mail.css
+	"$@" NF c92ea7dc91d7147ae4c5f51be8e9bf1e share/opera/styles/mathml.css
+	"$@" NF e7dd3d81e0088d5fb56df880226cc7e1 share/opera/styles/message.css
+	"$@" NF 3750093c67f26b7815262956cc5c5652 share/opera/styles/mime.css
+	"$@" NF d761663842176dd50562d4dd958b7239 share/opera/styles/opera.css
+	"$@" NF 11bc76ab5a9b24026eaf47499235d50b share/opera/styles/plugins.css
+	"$@" NF 4f25b1757ad75536fd6811254e7e4e64 share/opera/styles/private.css
+	"$@" NF 028e214f2f1147678d50afc03705e7de share/opera/styles/search.css
+	"$@" NF 4a1307a5ef44ce6f2699910d68353aaf share/opera/styles/unstyledxml.css
+	"$@" NF 5bc0a8abcf1f533070d01415ecd7ad18 share/opera/styles/user/accessibility.css
+	"$@" NF 0543fa1f23163fda70da1abca48ab27b share/opera/styles/user/altdebugger.css
+	"$@" NF 83c445d3d83311a72e2b20ae3bcc31d2 share/opera/styles/user/classid.css
+	"$@" NF 2fa6fc6187625a9b18f593bc0155347d share/opera/styles/user/contrastbw.css
+	"$@" NF 3b14649c488639ccb271f4062fdbdbc3 share/opera/styles/user/contrastwb.css
+	"$@" NF 768fce2463be25592a7a18cf5de76dd5 share/opera/styles/user/disablebreaks.css
+	"$@" NF df59e1efbfe9e9e693007379ae36c7c7 share/opera/styles/user/disablefloats.css
+	"$@" NF b219720e32060eae7275b10f89822044 share/opera/styles/user/disableforms.css
+	"$@" NF ff377988948f88b59d786eb4b4f5f6bd share/opera/styles/user/disablepositioning.css
+	"$@" NF a282ab27760ce5c9d08e5d19e3679f45 share/opera/styles/user/disabletables.css
+	"$@" NF a89f5a95b9d93f02a5710a015e0eb1fa share/opera/styles/user/outline.css
+	"$@" NF 1641b9745dcd076b4850bc79a5e3a745 share/opera/styles/user/structureblock.css
+	"$@" NF 04db12198eb3e12f3fdb9818aff46cd7 share/opera/styles/user/structureinline.css
+	"$@" NF b32564a2bc51123644e04b434c70d24b share/opera/styles/user/structuretables.css
+	"$@" NF 76eadfb729094d536d2313e62ec5f02b share/opera/styles/user/tablelayout.css
+	"$@" NF 0247352ff07de9a6f4a9ea9661fe54a9 share/opera/styles/user/toc.css
+	"$@" NF 9b8a12dbe6f509e1a12883151c82b1af share/opera/styles/warning.css
+	"$@" NF 5d9184651dd41df3b071ee75928338f5 share/opera/styles/webfeeds.html
+	"$@" NF 9edd8f497d3202b7e6d7a9c6e6b98bf8 share/opera/styles/webstorage.css
+	"$@" NF ff04b782043ab4c4b1b0d4114901af21 share/opera/styles/wml.css
+	"$@" NF 44367a5664e3758fceb12d7d0528da4f share/opera/ui/dialog.ini
+	"$@" NF e6d9e74c12773dcf0d6a195b6b9e78ac share/opera/ui/fastforward.ini
+	"$@" NF 255c35499136073c3f366681358adbb0 share/opera/ui/standard_keyboard.ini
+	"$@" NF f9382758f2d97867e0aa24108e23b6ee share/opera/ui/standard_keyboard_compat.ini
+	"$@" NF 73da727b5f351382f76a639294ed9da6 share/opera/ui/standard_menu.ini
+	"$@" NF 409158c2199b46dfc673b1376af89142 share/opera/ui/standard_mouse.ini
+	"$@" NF 7c34d320f929cf6d69303ece37f98ac0 share/opera/ui/standard_toolbar.ini
+	"$@" NF 01824c53257c4e7651097feafe333fa6 share/opera/ui/unix_keyboard.ini
+	"$@" NF b0ce745f7e2ceb4ed9883b1e8812f847 share/opera/unite/fileSharing.ua
+	"$@" NF a85b9a5757dd7300c22a74f5b714e032 share/opera/unite/fridge.ua
+	"$@" NF 977dea7738dabea23da4b2622bd156e0 share/opera/unite/home.ua
+	"$@" NF 2411bd99840e07c64abbe5329b7bc35e share/opera/unite/mediaPlayer.ua
+	"$@" NF df74967d39656a9927458f61fb630976 share/opera/unite/messenger.ua
+	"$@" NF 4a0c7e4a9448d4dfa0d98a603423f6a4 share/opera/unite/photoSharing.ua
+	"$@" NF fbbe2d0c39edd1f38812cc838764203f share/opera/unite/webserver.ua
+	"$@" GX - bin/opera
+	"$@" GX - bin/opera-widget-manager
+	"$@" GX - bin/uninstall-opera
+}
+
+available()
+{
+	which "$1" >/dev/null 2>&1
+}
+
+finalize_xdg()
+{
+	if available update-desktop-database
+	then
+		update-desktop-database $PREFIX/share/applications
+	fi
+	if available update-mime-database
+	then
+		mkdir -p $PREFIX/share/mime/packages
+		update-mime-database $PREFIX/share/mime
+		rmdir $PREFIX/share/mime/packages >/dev/null 2>&1
+	fi
+}
+
+make_tempdir()
+{
+	if [ -z "$tempdir" ]
+	then
+		tempdir=$(mktemp -d -t opera-install.XXXXXXXX)
+		if [ $? != 0 ]
+		then
+			ui_error "Cannot create a temporary directory, please set TMPDIR correctly"
+		fi
+	fi
+}
+
+cleanup()
+{
+	res=$?
+	trap - 0
+	if [ $res -gt 0 ] && $need_rollback
+	then
+		rollback
+	fi
+	if $need_ui_cleanup
+	then
+		ui_cleanup
+	fi
+	if [ -n "$tempdir" ]
+	then
+		rm -rf $tempdir
+	fi
+	exit $res
+}
+
+ui_widget()
+{
+	local width height
+	message=$(
+		echo "$2"
+		if [ -n "$3" ]
+		then
+			echo
+			cat "$3"
+		fi
+		if [ -n "$4" ]
+		then
+			echo
+			echo "$4"
+		fi
+	)
+	case $driver in
+		dialog|whiptail)
+			width=72
+			if available fmt
+			then
+				message=$(echo "$message" | fmt -w $((width - 4)))
+				height=$(($(echo "$message" | wc -l) + 6))
+				if [ $1 = inputbox ]
+				then
+					height=$((height + 2))
+				fi
+			else
+				height=20
+			fi
+			;;
+	esac
+	need_ui_cleanup=true
+	case $driver in
+		dialog|whiptail)
+			exec 4>&1
+			answer=$($driver --title "$windowtitle" --clear --$1 "$message" $height $width 2>&1 1>&4)
+			res=$?
+			exec 4>&-
+			;;
+		plain)
+			echo
+			echo "$message"
+			case $1 in
+				yesno)
+					while true
+					do
+						read -p 'Please enter Y or N: ' answer
+						case "$answer" in
+							y*|Y*)
+								res=0
+								break
+								;;
+							n*|N*)
+								res=1
+								break
+								;;
+						esac
+					done
+					;;
+				inputbox)
+					read -p '>' answer
+					;;
+				msgbox|infobox)
+					res=0
+					;;
+			esac
+			;;
+	esac
+	need_ui_cleanup=false
+	return $res
+}
+
+ui_info()
+{
+	ui_widget infobox "$@"
+}
+
+ui_message()
+{
+	ui_widget msgbox "$@"
+}
+
+ui_warn()
+{
+	ui_widget yesno "$1" "$2" 'Continue?' || exit
+}
+
+ui_error()
+{
+	ui_widget msgbox "$1" "$2" 'Installation aborted.'
+	exit 1
+}
+
+ui_input()
+{
+	ui_widget inputbox "$1" "$2" ''
+}
+
+ui_menu()
+{
+	local text width height
+	case $driver in
+		dialog|whiptail)
+			width=72
+			if available fmt
+			then
+				height=$(($(echo "$text" | fmt -w $((width - 4)) | wc -l) + $# / 2 + 8))
+			else
+				height=20
+			fi
+			;;
+	esac
+	need_ui_cleanup=true
+	case $driver in
+		dialog|whiptail)
+			text=$1
+			shift
+			exec 4>&1
+			answer=$($driver --menu "$text" $height $width $(($# / 2)) "$@" 2>&1 1>&4) || exit
+			res=$?
+			exec 4>&-
+			;;
+		plain)
+			echo
+			echo "$1"
+			shift
+			(
+				n=1
+				while [ -n "$1" ]
+				do
+					echo "[$n] $2"
+					n=$((n + 1))
+					shift 2
+				done
+			)
+			while true
+			do
+				read -p "Your choice: " answer
+				if echo "$answer" | grep -q '^[0-9][0-9]*$' && [ $((answer >= 1)) = 1 ] && [ $((answer <= $# / 2)) = 1 ]
+				then
+					break
+				fi
+				echo "Please enter an integer between 1 and $(($# / 2))."
+			done
+			shift $((answer * 2 - 2))
+			answer="$1"
+			res=0
+			;;
+	esac
+	need_ui_cleanup=false
+	return $res
+}
+
+ui_progress_begin()
+{
+	if ! $talk
+	then
+		return
+	fi
+	if [ -z "$progress_max" ]
+	then
+		progress_max=$(iterate echo | wc -l)
+	fi
+	progress_cur=0
+	need_ui_cleanup=true
+	case $driver in
+		whiptail)
+			make_tempdir
+			mkfifo $tempdir/gauge
+			whiptail --gauge "$1" 0 72 0 <$tempdir/gauge &
+			exec 3>$tempdir/gauge
+			;;
+		*)
+			echo
+			echo -n "$1"
+			;;
+	esac
+}
+
+ui_progress_advance()
+{
+	if ! $talk
+	then
+		return
+	fi
+	progress_cur=$((progress_cur + 1))
+	case $driver in
+		whiptail)
+			echo $((progress_cur * 100 / progress_max)) >&3
+			;;
+		*)
+			echo -n '.'
+			;;
+	esac
+}
+
+ui_progress_end()
+{
+	if ! $talk
+	then
+		return
+	fi
+	case $driver in
+		whiptail)
+			exec 3>&-
+			rm $tempdir/gauge
+			;;
+		*)
+			echo 'done'
+			;;
+	esac
+	need_ui_cleanup=false
+}
+
+ui_cleanup()
+{
+	case $driver in
+		dialog)
+			exec 4>&-
+			dialog --clear
+			stty sane
+			clear
+			;;
+		whiptail)
+			exec 3>&- 4>&-
+			stty sane
+			clear
+			;;
+		plain)
+			echo
+			;;
+	esac
+}
+
+ui_init()
+{
+	if [ -z "$TERM" -o "$TERM" = dumb ]
+	then
+		driver=plain
+	elif available whiptail
+	then
+		driver=whiptail
+	elif available dialog
+	then
+		driver=dialog
+	else
+		driver=plain
+	fi
+	answer=''
+	progress_max=''
+	windowtitle="$1"
+}
+
+common_init()
+{
+	interactive=true
+	talk=true
+	force=false
+	need_rollback=false
+	need_ui_cleanup=false
+	tempdir=''
+
+	trap cleanup 0 INT QUIT TERM
+}
+
+common_opt()
+{
+	case "$1" in
+		--text)
+			driver=plain
+			;;
+		--unattended)
+			interactive=false
+			driver=plain
+			;;
+		--quiet)
+			talk=false
+			interactive=false
+			driver=plain
+			;;
+		--force)
+			force=true
+			;;
+		*)
+			return 1
+	esac
+}
+
+# EOF_COMMON
+INSTALLMODE='user'
+PREFIX='/home/sohunjug/.local'
+SUFFIX=''
+
+usage()
+{
+	version
+	cat <<EOF
+
+Options:
+    --text          Select plaintext user interface
+    --unattended    Ask no questions
+    --quiet         Ask no questions and don't show progress (implies --text)
+    --force         Ignore all kinds of errors and try to continue
+    --help          Show this message
+EOF
+}
+
+uninstall_file()
+{
+	if $upgrade_mode
+	then
+		mv "$PREFIX/$3" "$PREFIX/$3~"
+		echo "mv '$PREFIX/$3~' '$PREFIX/$3'" >>$install_tempdir/rollback
+		echo "rm -f '$PREFIX/$3~'; rmdir -p '$PREFIX/${3##*/}' 2>/dev/null" >>$install_tempdir/commit
+	else
+		rm -f "$PREFIX/$3"
+		rmdir -p "$PREFIX/${3%/*}" 2>/dev/null
+	fi
+	ui_progress_advance
+}
+
+common_init
+ui_init 'Uninstalling Opera'
+
+upgrade_mode=false
+
+while [ -n "$1" ]
+do
+	common_opt "$1" || case "$1" in
+		--upgrade)
+			shift
+			upgrade_mode=true
+			talk=false
+			interactive=false
+			driver=plain
+			force=true
+			install_tempdir="$1"
+			;;
+		*)
+			driver=plain
+			usage
+			exit
+			;;
+	esac
+	shift
+done
+
+if $talk
+then
+	msg="This script uninstalls Opera 10.60 build 6386 for Linux on x86_64 installed as $PREFIX/bin/opera$SUFFIX."
+	if $interactive
+	then
+		ui_warn "$msg"
+	else
+		ui_message "$msg"
+	fi
+fi
+
+if [ $INSTALLMODE = system -a ! -w /usr/local ] && ! $force
+then
+	ui_error "You must be root to uninstall software installed system-wide."
+fi
+
+ui_progress_begin "Removing files"
+iterate uninstall_file
+ui_progress_end
+
+if ! $upgrade_mode
+then
+	if $talk
+	then
+		ui_info "Finalizing uninstallation..."
+	fi
+	finalize_xdg
+fi
+
+if $talk
+then
+	case $INSTALLMODE in
+		user)
+			ui_message "Opera has been uninstalled successfully. However, your profile directory, which is by default ~/.opera$SUFFIX, has been left intact. You might want to delete it manually."
+			;;
+		system)
+			ui_message "Opera has been uninstalled successfully. However, users' profile directories, which are by default ~/.opera$SUFFIX, have been left intact. You might want to delete them manually."
+			;;
+	esac
+fi

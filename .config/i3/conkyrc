@@ -1,0 +1,17 @@
+# conky to work with i3bar
+# icons:     
+
+out_to_x no
+out_to_console yes
+own_window no
+short_units yes
+update_interval 1
+background no
+total_run_times 0
+short_units yes
+use_spacer left
+override_utf8_locale no
+cpu_avg_samples 2
+
+TEXT
+    $kernel    $acpitemp °C     ${cpu cpu1}%     ${mem}     ${if_up enp33s0}${addr enp33s0}  ${downspeedf enp33s0} KiB/s      ${time %d-%m-%Y}   ${time %H:%M}

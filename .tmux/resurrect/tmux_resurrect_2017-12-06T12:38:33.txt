@@ -1,0 +1,3 @@
+pane	sohunjug	1	:mpp	1	:*	0	:/home/sohunjug	1	bash	:
+window	sohunjug	1	1	:*	cd1d,209x57,0,0,0
+state	sohunjug	

@@ -1,0 +1,1 @@
+['local', 'require', 'long', 'function', 'setmetatable', 'self', '__index', 'packages', 'return', 'check', 'truncat', 'once', 'then', 'checkAndRetOne', 'flag', 'hostcfg', 'curpack', 'MsgOff', 'string', 'JOLT', 'logerror', 'skey', 'ckey', 'position', 'find', 'DROP', 'else', 'slen', 'strTotOff', 'allLen', 'byte', 'buff', 'strKeyOff', 'msglen', 'getOneMsgAndID', 'msgtype']

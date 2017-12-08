@@ -1,0 +1,1 @@
+['polybar', 'wrapper', 'alignment', 'top_middle', 'background', 'minimum_size', '3000', 'border_width', 'own_window', 'own_window_type', 'panel', 'own_window_class', 'conky', 'own_window_argb_visual', 'own_window_transparent', 'update_interval', '2000', 'short_units', 'gap_x', 'gap_y', 'own_window_argb_value', 'own_window_colour', '000000', 'TEXT']

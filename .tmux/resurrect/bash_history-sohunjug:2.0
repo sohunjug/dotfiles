@@ -1,0 +1,500 @@
+ls
+cd themes/
+ls
+cd ..
+./i3wmthemer -t backups/sohunjug
+cd scripts/
+./i3wmthemer -t backups/sohunjug
+./i3wmthemer -t ../backups/sohunjug
+cd ..
+ls
+cd backups/
+ls
+cd sohunjug/
+ls
+ls -a
+cp .config/i3 ~/.i3
+cp -r .config/i3 ~/.i3
+cd .config/
+ls
+mv i3 ../.i3
+ls
+cp -r * ~/.config/
+cd ..
+ls
+ls -a
+cd .resources/
+ls
+ls -a
+cp -r .Xresources ~/
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd scripts/
+ls
+vi i3wmthemer 
+ps -ef | grep syner
+sudo su
+ps -ef | grep syner
+ps -ef | grep syner
+ps -ef | grep syner
+ps -ef | grep syner
+ps -ef | grep syner
+sms
+cd .config/
+ls
+cd ..
+cd -
+scp -r polybar 192.168.88.8:~/.config/
+scp -r dunst popups ranger urxvtconfig i3 lighthouse luakit ncmpcpp 192.168.88.8:~/.config/
+ls
+vi .Xresources
+xrdb -load .Xresources
+ls
+ls 
+ps -ef | grep xinit
+ps -ef | grep conf
+ps -ef | grep con
+ps -ef | grep conk
+vi .xinitrc 
+ls
+vi .config/i3/config 
+ls
+cd Downloads/
+ls
+cd i3wm-themer/
+ls
+cd backups/
+ls
+cd sohunjug/
+ls
+cd .config/
+ls
+cd ..
+cd .i3/
+ls
+vi config 
+cp config ~/.config/i3/
+vi ~/.config/i3/config 
+ls
+urxvt
+xrdb -load .Xresources
+urxvt
+ls
+cd .config/
+ls
+rm -rf urxvtconfig/
+ls
+cd ..
+ls
+ls
+cd Downloads/
+ls
+cd i
+cd i3wm-themer/
+ls
+cd backups/
+ls
+cd sohunjug/
+ls
+cd .config/
+ls
+cd polybar/
+ls
+cp config ~/.config/polybar/
+cd ..
+cd dunst/
+ls
+cp dunstrc ~/.config/dunst/
+ls
+cd Downloads/
+ls
+cd i3wm-themer/
+ls
+cd backups/
+ls
+cd sohunjug/
+cd .config/
+ls
+ls -a
+cd ..
+ls 
+ls -a
+ls
+cd Other/
+ls
+ls -a
+ls
+cd ..
+ls
+cd .resources/
+ls -a
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+cd 
+ls
+cd .config/
+ls
+scp -r 192.168.88.8:~/.config/compton.conf .
+scp -r 192.168.88.8:~/.config/polybar/conky_wrapper polybar/
+scp -r 192.168.88.8:~/.config/i3/conkyrc ~/i3/
+scp -r 192.168.88.8:~/.config/i3/conkyrc i3/
+ls
+cd .config/
+cd polybar/
+ls
+vi conky_wrapper 
+cd 
+ls
+scp -r 192.168.88.8:~/.colors .
+scp -r 192.168.88.8:~/.themes .
+ls
+cd .config/
+ls
+cp -r ../.vim nvim
+cd ..
+ls -a
+ls -al
+cd .config/
+cp -r ../Documents/dotfiles/vim nvim
+cd ../Documents/dotfiles/
+ls
+cd vim
+ls
+ls
+cd ..
+cp -r vim nvim
+mv vim ~/.config/
+mv nvim vim
+cd 
+ls
+ls -a
+ls -al
+cd .config/
+ls
+mv vim nvim
+ls
+cd nvim/
+cp ~/Documents/dotfiles/vimrc init.vim
+nvim
+cd .
+cd 
+ls
+cd .vim
+ls
+cd bundle/
+ls
+mv Vundle.vim ..
+ls
+rm -rf *
+mv ../Vundle.vim .
+ls
+cd ..
+ls
+cd cache/
+ls
+rm *
+ls
+cd swap/
+ls
+rm *
+ls
+cd ..
+cd 
+ls
+conky -c .config/polybar/conky_wrapper -d
+cd .config/
+cd polybar/
+vi conky_wrapper 
+conky -c conky_wrapper -d
+ps -ef | grep tmux
+tmux ls
+tmux k -t 0
+tmux kill-sess -t 0
+sudo su
+fc-cache 
+fc-cache -fv
+ps -ef | grep conk
+kill -9 9969
+ssh -p222 mpp@sohunjug.com
+tmux
+vi .aliases 
+cd .local/
+ls
+cd bin
+ls
+scp -P222 mpp@sohunjug.com:~/.local/bin/t .
+vi t
+ls
+t
+sudo su 
+ls
+t
+vi t
+t
+vi t
+t
+ls
+ssh -p222 mpp@sohunjug.com
+tmux ls
+sudo su
+cd 
+vi .bashrc 
+vi .aliases 
+source .aliases 
+cds
+ls
+cd mpp-apiserver/
+syncjs
+syncjs init
+syncjs
+cds
+ls
+cd mpp-cupserver/
+ls
+syncjs init
+cd 
+cd /data/Code/sohunjug-code/mpp-cupserver/
+syncjs
+ls
+cd /data/
+ls
+cd Code/
+ls
+cd sohunjug-code/
+ls
+cd py
+ps -ef | grep syn
+ps -ef | grep syner
+kill -9 2996
+sms
+ifconfig
+ssh sohunjug@192.168.88.8
+ls
+ls
+cd 
+ls
+cd Downloads/
+ls
+scp -r 192.168.88.8:/data/sohunjug-code/python/sshlist .
+ls
+cd sshlist/
+ls
+vi ssh.py 
+ls
+mv hf.yaml hf.yml
+mv ht.yaml ht.yml
+mv kayak.yaml kayak.yml
+mv sohunjug.yaml sohunjug.yml
+ls
+cd ..
+ls
+mv sshlist ~/.sshlist
+cd 
+ls
+ls -a
+vi .aliases 
+source .aliases 
+conn
+pip install --user pexpect
+ls
+conn
+ls
+ls -a
+conn
+cd .local/
+ls
+cd lib64/
+ls
+cd python3.4/
+ls
+cd 
+ls
+pip
+pip -v
+pip --version
+sudo su
+python
+sudo su 
+conn
+pip install --user pexpect
+conn
+pip install --user yaml
+pip install --user pyyaml
+conn
+vi .sshlist/ssh.py 
+conn
+conn
+vi .sshlist/ssh.py 
+conn
+ls
+vi .sshlist/ht.yml 
+ls
+vi .sshlist/ssh.py 
+vi .sshlist/ssh.py 
+ls
+cd .sshlist/
+ls
+cd __pycache__/
+ls
+cd ..
+ls
+vi hf.yml 
+ls
+rm hf.yml 
+ls
+vi ssh.py 
+conn 2 4 0
+conn 2 4 0
+ls
+conn 2 4 0
+exit
+vi .sshlist/ht.yml 
+conn
+conn
+cd .sshlist/
+pip2 install --user pyyaml pexpect
+conn
+conn
+conn
+conn
+conn
+conn
+conn
+conn
+exit
+conn 2 4 0
+conn 2 4 0
+sudo s
+sudo su
+conn 2 4 0
+ls
+cd .tmux
+ls
+cd plugins/
+ls
+cd tmux-resurrect/
+ls
+cd ..
+cd 
+ls
+vi .tmux.conf 
+tmux -h
+tmux --help
+man tmux
+tmux source .tmux.conf 
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:3.0'
+ls
+ssh 192.168.88.8
+sudo su
+ls
+vi .tmux.conf 
+ls
+vi ~/.local/bin/meld-git
+git config --global diff.external ~/.local/bin/meld-git 
+chmod +x ~/.local/bin/meld-git 
+cd /data/
+cd Code/
+cd sohunjug-code/
+ls
+cd mpp-cupserver/
+ls
+git diff
+git config --global diff.tool meld
+git config --global merge.tool meld
+git merge
+git diff
+git config --global diff.external default
+git diff
+git config --global diff.external 
+git diff
+git config
+git config --get-all
+git config --get-all 
+git config -l
+git config --global --unset diff.external 
+git diff
+git difftool
+git merge
+git help merge
+git help merge
+git merge --continue
+git merge master
+git difftool
+git pull
+git diff
+git commit -am "buffer and queue id"
+git push gitlab master
+cd ..
+cd mpp-apiserver/
+ls
+git pull
+git difftool
+git diff
+git config --global -l
+git difftool
+git config --global -l
+git config --global 
+git config -l
+ls
+cd restful/
+ls
+cd ..
+cd routes/
+ls
+cd api/
+ls
+vi lend.js 
+git reflogs
+git reflog
+git reflog
+git log
+git reflog
+git log
+git reset --hard 0d1da3d34d79dfb1d6ec4d701dec0bae78c7aff9
+ls
+vi lend.js 
+ls
+git pull
+ls
+vi lend.js 
+gvim lend.js 
+cp lend.js back.js 
+cd ..
+cd ..
+ls
+syncjs
+sudo su
+ssh -p222 mpp@sohunjug.com
+cd /data/
+ls
+cd Code/
+ls
+cd sohunjug-code/
+ls
+cd mpp-cupserver/
+ls
+t
+ls
+cd 
+ls
+ls -a
+scp -r 192.168.88.8:~/.tmux .
+scp -r mpp@sohunjug.com:~/.tmux .
+scp -P222 -r mpp@sohunjug.com:~/.tmux .
+t
+tmux ls
+tmux kill-session sohunjug
+tmux kill-session -t sohunjug
+t
+fg
+history -r '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:2.0'
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:2.0'
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:2.0'

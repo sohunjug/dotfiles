@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ "${BLOCK_BUTTON}" -eq 1 ]; then
+   getworldip
+fi
+
+if [ ! -f /tmp/worldip ]; then
+   getworldip
+fi
+
+echo $(cat /tmp/worldip)
+echo $(cat /tmp/worldip)
+

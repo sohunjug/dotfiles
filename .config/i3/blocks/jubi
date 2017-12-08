@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /disk/sohunjug-code/python/trader
+python get_balance.py

@@ -1,0 +1,1 @@
+['bash', 'test', 'HOME', '.bash_profile', 'then', '.bashrc', 'kkshutdown', 'q_id', 'ipcs', 'grep', 'USER', 'printf', 'ipcrm', 'done', 'Cleaning', 'Shared', 'Memory', 'm_id', 'Semaphores', 's_id', 'kkstart']

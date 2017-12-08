@@ -1,0 +1,1 @@
+['bash', 'BLOCK_BUTTON', 'then', 'sudo', 'systemctl', 'restart', 'shadowsocks', 'elif', 'grep', 'sslocal', 'us.json', 'stat', 'stop', 'else', 'start', 'echo']

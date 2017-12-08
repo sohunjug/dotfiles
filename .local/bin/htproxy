@@ -1,0 +1,1 @@
+sshpass -p "1ww9w-Ps1A34" ssh -qCD 7070 wwwuser@115.159.144.118 -p 22022 > /dev/null &

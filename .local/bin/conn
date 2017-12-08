@@ -1,0 +1,143 @@
+#!/usr/bin/python
+#-*- coding:utf-8 -*-
+import sys, time, os, pexpect, yaml, time, termios, struct, fcntl
+
+configdir = os.environ["HOME"] + "/.sshlist/"
+
+def GetFiles(dir):
+    configfiles = []
+    for parent, dirs, files in os.walk(dir):
+        for file in files:
+            configfiles.append(file)
+    return configfiles
+
+def ReadFile(file):
+    fd = open(file)
+    x = yaml.load(fd)
+    fd.close()
+    return x
+
+def GetConfig():
+    files = GetFiles(configdir)
+    config = {}
+    for file in files:
+        c = ReadFile(configdir + file)
+        config[c["comment"]] = c
+    return config
+def GetWinSize():
+    """This returns the window size of the child tty.
+    The return value is a tuple of (rows, cols).
+    """
+    if 'TIOCGWINSZ' in dir(termios):
+        TIOCGWINSZ = termios.TIOCGWINSZ
+    else:
+        TIOCGWINSZ = 1074295912 # Assume
+    s = struct.pack('HHHH', 0, 0, 0, 0)
+    x = fcntl.ioctl(sys.stdout.fileno(), TIOCGWINSZ, s)
+    return struct.unpack('HHHH', x)[0:2]
+
+def Ssh(config, userconfig, proxy=None):
+    ssh = None
+    user = userconfig["username"]
+    pswd = userconfig["password"]
+    if type(pswd) != str:
+        pswd = str(pswd)
+    ip = config["ip"]
+    port = 22
+    if "port" in config:
+        port = config["port"]
+    if proxy:
+        pip = proxy["ip"]
+        pport = 22
+        if "port" in proxy:
+            pport = proxy["port"]
+        if proxy["type"] == "ssh":
+            puser = proxy["username"]
+            ppswd = proxy["password"]
+            ssh = pexpect.spawn("ssh -p%d %s@%s" % (pport, puser, pip))
+            ret = ssh.expect([".*ssword:", "] $", "Are you sure you want to", "> $", "# $", "\$ $", pexpect.EOF, pexpect.TIMEOUT])
+            flag = 5
+            if ret == 2:
+                flag = 0
+                ssh.sendline("yes")
+                ret = ssh.expect([".*ssword:", pexpect.EOF, pexpect.TIMEOUT])
+            if ret > flag:
+                print("跳板机无法登陆!")
+                sys.exit(1)
+            elif ret == 0:
+                ssh.sendline(ppswd)
+                ret = ssh.expect(["]", ">", "#", "\$", pexpect.EOF, pexpect.TIMEOUT])
+            ssh.sendline("export PS1='# #>>'")
+            ssh.expect("# #>>")
+            ssh.sendline("ssh -p%d %s@%s" % (port, user, ip))
+        elif proxy["type"] == "sock":
+            print("p ssh -p%d %s@%s" % (port, user, ip))
+            ssh = pexpect.spawn("p ssh -p%d %s@%s" % (port, user, ip))
+    else:
+        ssh = pexpect.spawn("ssh -p%d %s@%s" % (port, user, ip))
+    flag = 5
+    ret = ssh.expect([".*ssword:", "] $", "Are you sure you want to", "> $", "# $", "\$ $", pexpect.EOF, pexpect.TIMEOUT])
+    if ret == 2:
+        flag = 0
+        ssh.sendline("yes")
+        ret = ssh.expect([".*ssword:*", pexpect.EOF, pexpect.TIMEOUT])
+    if ret > flag:
+        print("无法登陆服务器 %s:%d!" % (ip, port))
+        sys.exit(1)
+    elif ret == 0:
+        ssh.sendline(pswd)
+    ssh.expect(["continue connecting (yes/no)?", ".*ssword:", "] $", "> $", "# $", "\$ $", pexpect.EOF, pexpect.TIMEOUT])
+    ssh.sendline('export PS1="\\[\\e[31;1m\\]\\u @ \\[\\e[34;1m\\]\\h \\[\\e[36;1m\\]\\w \\[\\e[33;1m\\]\\t $ \\[\\e[37;1m\\]\\n-> "')
+    # ssh.sendline("clear")
+    winsize = GetWinSize();
+    ssh.setwinsize(winsize[0], winsize[1])
+    ssh.interact()
+
+def PrintList(n=None, m=None, u=None):
+    config = GetConfig()
+    comment = {}
+    hostconfig = {}
+    userconfig = {}
+    for index, c in enumerate(sorted(config)):
+        comment[index] = c
+        print("% 2d. %s" % (index, c))
+    if n is None:
+        n = int(sys.stdin.readline().strip("\n"))
+    # os.system("clear")
+    print("IP LIST:")
+    for index, c in enumerate(config[comment[n]]["host"]):
+        print("% 2d. %s" % (index, c["ip"]))
+    if m is None:
+        m = int(sys.stdin.readline().strip("\n"))
+    # os.system("clear")
+    print("USER LIST:")
+    for index, c in enumerate(config[comment[n]]["host"][m]["users"]):
+        userconfig[index] = c
+        print("% 2d. %s" % (index, c["username"]))
+        if u is not None:
+            if u == c["username"]:
+                u = index
+    if u is None:
+        u = int(sys.stdin.readline().strip("\n"))
+    if type(u) == str:
+        u = 0
+    user = userconfig[u]
+    # os.system("clear")
+    sshconfig = config[comment[n]]["host"][m]
+    if "proxy" in config[comment[n]] and "proxy" in sshconfig:
+        Ssh(sshconfig, user, config[comment[n]]["proxy"][sshconfig["proxy"]])
+    else:
+        Ssh(sshconfig, user)
+
+if __name__ == "__main__":
+    print("SSH LIST:")
+    n = None
+    m = None
+    u = None
+    if len(sys.argv) > 1:
+        n = int(sys.argv[1])
+    if len(sys.argv) > 2:
+        m = int(sys.argv[2])
+    if len(sys.argv) > 3:
+        u = sys.argv[3]
+    PrintList(n, m, u)

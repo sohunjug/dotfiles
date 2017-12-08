@@ -1,0 +1,1 @@
+['#include', 'string', 'stdio', 'main', 'argc', 'char', 'argv', 'unsigned', 'input', 'ilen', 'output', 'sm3_context', 'printf', 'Message', 'Hash', 'abcd', 'sm3_starts', 'sm3_update', 'sm3_finish', 'memset', 'sizeof', 'getch', 'VS2008']

@@ -1,0 +1,7 @@
+[user]
+	email = sohunjug@hotmail.com
+	name = sohunjug
+[diff]
+	tool = meld
+[merge]
+	tool = meld

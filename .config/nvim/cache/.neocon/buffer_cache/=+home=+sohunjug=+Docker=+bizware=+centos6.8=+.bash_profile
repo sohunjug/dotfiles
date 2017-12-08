@@ -1,0 +1,1 @@
+['.bashrc', 'then', 'export', 'ROOTDIR', 'HOME', 'PATH', 'bizware', 'ULOGPFX', 'KAYAKCFG', 'BIZCFG', 'KKF2DIR', 'kkf2', 'DCCFG2DIR', 'dccfg2', 'BIZLOGLEVEL', 'DEBUG', 'LD_LIBRARY_PATH', 'LANG', 'en_US.UTF-8', 'BIZLOGSIZE', 'PAGER', 'more', 'ulimit']

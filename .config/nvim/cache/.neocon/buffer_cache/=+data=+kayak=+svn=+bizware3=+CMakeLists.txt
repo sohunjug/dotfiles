@@ -1,0 +1,1 @@
+['CMAKE_MINIMUM_REQUIRED', 'VERSION', 'PROJECT', 'bizware', 'ADD_SUBDIRECTORY', 'kutils', 'kconsole', 'yaml']

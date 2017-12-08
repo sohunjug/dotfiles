@@ -1,0 +1,1 @@
+['bash', 'title', '--format', 'head', 'then', 'echo', 'else']

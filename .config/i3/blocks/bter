@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /disk/sohunjug-code/python/bter-api
+python get_balance.py

@@ -1,0 +1,4 @@
+#!/bin/sh
+export OPERA_DIR=${OPERA_DIR:-/home/sohunjug/.local/share/opera}
+export OPERA_PERSONALDIR=${OPERA_PERSONALDIR:-$HOME/.opera}
+exec /home/sohunjug/.local/lib/opera/opera "$@"

@@ -1,0 +1,5 @@
+pane	sohunjug	1	:~	0	:-	0	:/home/sohunjug	1	zsh	:
+pane	sohunjug	2	:..mes/material2	1	:*	0	:/home/sohunjug	1	zsh	:sudo su
+window	sohunjug	1	0	:-	cb5f,234x57,0,0,2
+window	sohunjug	2	1	:*	cb60,234x57,0,0,3
+state	sohunjug	

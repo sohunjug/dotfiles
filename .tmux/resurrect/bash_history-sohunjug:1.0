@@ -1,0 +1,500 @@
+ls
+vi Xorg.2.log 
+startx
+vi Xorg.1.log
+startx
+vi Xorg.1.log
+startx
+vi Xorg.1.log
+ifconfig
+startx
+vi Xorg.1.log
+startx
+vi Xorg.1.log
+startx
+gcc -v -E -x c -march=native -mtune=native - < /dev/null 2>&1 | grep cc1 | perl -pe 's/^.* - //g;'
+sudo vi /etc/portage/make.conf
+sudo su 
+sogou-qimpanel
+fc-cache -fv
+ls
+sudo su
+ls
+mkdir Downloads
+cd Downloads/
+ls
+git clone https://github.com/nmikhailov/Validity90.git
+cd Validity90/
+ls
+cd libfprint/
+ls
+sudo su
+startx
+google-chrome-unstable --proxy-port=socks5://127.0.0.1:1080
+google-chrome-unstable -h
+google-chrome-unstable --proxy-server=socks5://127.0.0.1:1080
+sudo su
+sudo su
+work
+sudo su
+conn
+ls -a
+t
+cd /data/
+ls
+cd sohunjug-code/
+ls
+cd mpp-apiserver/
+ls
+ls
+sudo su
+sudo su
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:3.0'
+ssh root@10.1.6.66
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:2.0'
+sudo su
+ssh root@10.1.0.32
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:4.0'
+cd Downloads/
+ls
+scp biz@10.1.6.66:~/bizware/bin/bpm2srv.tgz .
+ htop
+sudo su
+sudo su
+ssh root@10.1.0.31
+ssh root@10.1.6.66
+t
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:2.0'
+sudo su
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:4.0'
+sudo su
+cd /data/
+ls
+sudo su
+. /etc/profile
+ls
+. ~/.bashrc 
+ls
+ls -la
+cd sohunjug-code/
+ls
+cd mpp-apiserver/
+ls
+git pull
+scp -r 192.168.88.66:~/.ssh/* ~/.ssh/
+git pull
+git push
+ls
+cd mpp-do
+cd ..
+ls
+cd mpp-doc
+ls
+git pull
+ls
+touch a
+ls
+rm a
+ls
+sudo vi /etc/fstab 
+sudo su
+cd 
+ls
+rm -rf .emacs.d/
+rm -rf .spacemacs.d/
+scp 192.168.88.66:~/.spacemacs.d .
+scp 192.168.88.66:~/.emacs.d .
+p scp 192.168.88.66:~/.emacs.d .
+scp -r 192.168.88.66:~/.emacs.d .
+scp -r 192.168.88.66:~/.spacemacs.d .
+ls
+weechat
+weechat
+weechat
+weechat
+weechat
+ls
+cd Downloads/
+ls
+cd webqqircd/
+ls
+cat mq.js 
+ls
+./webqqircd.py 
+work
+sudo su
+ls
+cd Downloads/
+ls
+git clone https://github.com/MaskRay/webqqircd
+ls
+cd webqqircd/
+ls
+pip install --user requirements.txt 
+sudo su
+pip install --user requirements.txt 
+pip install --user -f requirements.txt 
+pip install requirements.txt 
+pip install requirements.txt  --user
+pip --user install requirements.txt
+pip install requirements.txt
+pip install --user `cat requirements.txt`
+pip install --user -r requirements.txt
+python
+sudo su
+pip install --user -r requirements.txt
+sudo su
+work
+ls
+cd Downloads/webqqircd/
+./webqqircd.py 
+./webqqircd.py &
+t
+ssh root@sohunjug.com
+ssh -p222 root@sohunjug.com
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:3.0'
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:4.0'
+work
+sudo su
+t
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:3.0'
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:4.0'
+sudo su
+sudo su
+ls
+cd .local/
+ls
+cd bin
+ls
+vi i3exit 
+ls
+cd ..
+ls
+cd ..
+cd .config/
+cd i3
+vi config 
+exit
+vi .config/i3/config 
+exit
+sudo su
+pm-hibernate
+cd .local/bin/
+ls
+cat i3exit 
+i3exit suspend
+sudo su
+udo su
+sudo su
+ssh 192.168.88.66
+ssh 192.168.88.66
+sudo su
+cd Documents/
+ls
+mkdir gentoo
+ls
+cp /*.sh gentoo/
+cp /loginkayak.py gentoo/
+cp /wpa_supplicant.conf gentoo/
+cp /var/lib/portage/world gentoo/
+cp /usr/src/linux/.config gentoo/
+cp -r /etc/shadowsocks/ gentoo/
+cp /etc/init.d/hk gentoo/
+cp /etc/DIR_COLORS gentoo/
+cp /etc/portage/make.conf gentoo/
+cp /etc/portage/repos.conf/* gentoo/
+cp /etc/conf.d/net gentoo/
+ls
+cd /etc/
+ls
+cd default/
+ls
+cd ..
+cd -
+ls
+cd 
+cd Documents/
+ls
+cp -r gentoo /data/gentoo/
+cd /data/gentoo/
+ls
+cd 
+cd /
+ls
+sudo reboot
+sudo su
+cp /home.sh .local/bin/hs
+hs
+sudo su
+ls
+ranger 
+sudo /etc/init.d/net.wlp3s0 restart
+sudo su
+ls
+cd 
+ls
+dotfiles 
+export TERM=xterm
+ls
+rm .local/bin/dotfiles 
+dotfiles 
+exit
+dotfiles 
+dotfiles -h
+export TERM=xterm
+ls
+dotfiles -R ./Documents/dotfiles -f -s
+ls -l
+ls -la
+ls
+exit
+ls
+startx
+exit
+startx
+exit
+cd 
+ls
+startx
+vi .local/share/xorg/Xorg.0.log 
+exit
+startx
+exit
+startx
+exit
+ls
+cd Downloads/
+ls
+cd ..
+cd Documents/
+ls
+git clone https://aur.archlinux.org/yaourt.git
+cd yaourt/
+ls
+makepkg -si
+exit
+export TERM=xterm
+ls
+su root
+makepkg -si
+sudo pacman -Syu
+sudo pacman -S package-query
+exit
+export TERM=xterm
+makepkg -si
+yaourt -Ss i3
+yaourt -S i3-gaps
+ls
+exit
+ls
+ls
+ls
+ls
+exxit
+exit
+ls
+ls
+yaourt -S urxvt
+yaourt -Ss urxvt
+yaourt -Ss urxvt-unicode
+yaourt -S urxvt-unicode
+yaourt -S rxvt-unicode
+yaourt -S rxvt-perls
+yaourt -S urxvt-perls
+yaourt -Ss google-chrome
+yaourt -S google-chrome-dev
+yaourt -Ss qq
+yaourt -S deepin-wine-tim
+exit
+yaourt -S deepin-wine-tim
+exit
+yaourt -S deepin-wine-tim
+yaourt -Ss wechat
+yaourt -S rofi
+export TERM=xterm
+startx
+startx
+yaourt -S i3-gaps
+yaourt -S polybar
+yaourt -S libmpdclient ttf-unifont siji-git fontawesome
+export TERM=xterm
+yaourt -S libmpdclient ttf-unifont siji-git font-awesome
+yaourt -S libmpdclient ttf-unifont siji-git 
+yaourt -S ttf-unifont
+yaourt -S wqy-zenhei wqy-microhei
+yaourt -Ss linux
+yaourt -Ss linux-sources
+yaourt -Ss linux-source
+yaourt -Ss linux source
+yaourt -S fcitx fcitx-configtool
+yaourt -S sogoupinyin
+yaourt -S fcitx-sogoupinyin
+yaourt -S fcitx-sogoupinyin
+yaourt -Ss network
+yaourt -S network
+yaourt -S wget emacs zsh oh-my-zsh proxychains svn
+yaourt -S wget emacs zsh proxychains svn
+yaourt -S imagemagick
+yaourt -Ss awesome
+yaourt -S nerd-fonts ttf-font-icons 
+yaourt -S nerd-fonts-git ttf-font-icons 
+yaourt -S ttf-font-icons 
+fc-cache -fv
+fc-cache -fv
+sudo su
+ip a
+yaourt -S deepin-wechat
+yaourt -S rofi
+exit
+yaourt -S netease
+yaourt -Ss netease
+yaourt -Ss netease-cloud-music
+yaourt -S netease-cloud-music
+yaourt -S feh
+yaourt -
+yaourt -S alsa
+yaourt -S alsa-libs alsa-utils alsa-tools
+yaourt -S alsa-lib alsa-utils alsa-tools
+y
+yaourt -S pulsealsa
+yaourt -Ss puls
+exit
+yaourt -S jdmenu
+yaourt -Ss dmenu
+yaourt -Ss jmenu
+yaourt -S dmenu
+yaourt -S j4-dmenu-desktop
+yaourt -S gcc gcc-c++
+yaourt -S gcc
+yaourt -S j4-dmenu-desktop
+yaourt -S j4-dmenu-desktop-git
+vi .config/i3/config 
+yaourt -S ipython
+yaourt -Ss source pro
+sudo su
+yaourt -Ss kernel
+sudo su
+yaourt -S thinkpad
+yaourt -Ss thinkpad
+yaourt -S tp_smapi hdaps-gl dkms-tp_smapi-debian thinkpad-scripts
+yaourt -S tp_smapi hdaps-gl thinkpad-scripts
+pip uninstall requests
+sudo pip uninstall requests
+sudo pip uninstall urllib3
+sudo pip uninstall chardet idna
+yaourt -S tp_smapi hdaps-gl thinkpad-scripts
+yaourt -S xf86-input-wacom
+cd .local/bin
+ls
+cp /home/usr/bin/i3exit .
+vi i3exit 
+sudo su
+ip a
+sudo su
+rofi
+rofi
+ps -ef | grep tim
+ps -ef | grep -i tim
+kill 7898
+kill 7898
+ps -ef | grep -i tim
+pkill wine
+ps -ef  | grep wine
+kill -9 12174
+kill -9 12182
+ls
+exit
+exit
+yaourt -S nodejs
+exit
+yaourt -Ss shadowsocks
+yaourt -S shadowsocksr-libev
+sslocal -h
+exit
+pacman -Ss chrome
+yaourt -Ss chrome
+yaourt -Ss chromium
+yaourt -S chromium
+yaourt -S proxychains
+sudo su
+yaourt -Rc ttf-font-icons
+yaourt -S ttf-font-icons
+yaourt -S font iconv
+yaourt -S font icons
+yaourt -Ss font icons
+yaourt -S ttf-weather-icons ttf-material-design-icons-git nerd-fonts-complete
+exit
+yaourt -Ss polybar
+yaourt -S polybar
+fc-match FontAwesome
+fc-match fontawesome
+fc-match 
+fc-list
+fc-list | grep -i fontawesome
+p curl google.com
+yaourt -Sy
+yaourt -Syu
+yaourt -S ttf-font-awesome
+yaourt -Rc chromium
+yaourt -S google-chrome-dev
+yaourt -S fcitx-gtk
+yaourt -S fcitx-gtk2 fcitx-gtk3
+ip a
+sudo su
+yaourt -Ss iwlwifi
+dmesg 
+journalctl -u
+journalctl -xe
+cd /var/log
+ls
+grep -r iwlwifi *
+sudo su
+yaourt -Ss font awesome
+df
+yaourt -S nerd-fonts-git
+yaourt -S nerd-fonts-git
+fcitx
+ls
+fc-cache -fv
+ifconfig
+ip a
+sudo su
+yaourt -S pm
+yaourt -S pm-
+yaourt -S spm-
+yaourt -Ss pm-
+yaourt -Ss pm-utils
+yaourt -S pm-utils
+exit
+ifconfig
+ip a
+sudo su
+ifconfig
+ip a
+sudo su
+sudo su
+ip a
+yaourt -Ss vscode
+yaourt -S vscode-insiders
+yaourt -S vscode-insiders
+yaourt -S vscode
+yaourt -Ss vscode
+yaourt -S visual-studio-code
+y
+yaourt -Ss wechat
+yaourt -Rc deepin-wechat
+yaourt -Ss ppap
+yaourt -S pepper-flash freshplayerplugin
+yaourt -S flashplugin
+yaourt -Ss tim
+yaourt -Ss qq
+yaourt -Rc deepin-wine-tim
+uname -a
+ip a
+sudo su
+ip a
+sudo su
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:3.0'
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:4.0'
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:2.0'
+ history -w '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:1.0'

@@ -1,0 +1,8 @@
+pane	local	1	:mpp@sohunjug-aliyun:~	0	:#-	1	:/home/mpp	1	htop	:htop
+pane	local	2	:mpp@sohunjug-aliyun:~	0	:	1	:/home/mpp	1	node	:node /bin/pm2 logs mpp-apiserver
+pane	local	2	:mpp@sohunjug-aliyun:~	0	:	2	:/home/mpp	0	node	:node /bin/pm2 logs mpp-cupserver
+pane	local	3	:mpp@sohunjug-aliyun:~	1	:*	1	:/home/mpp	1	bash	:
+window	local	1	0	:#-	b39d,92x24,0,0,0
+window	local	2	0	:	7d9d,92x24,0,0{46x24,0,0,1,45x24,47,0,6}
+window	local	3	1	:*	b3a4,92x24,0,0,7
+state	local	

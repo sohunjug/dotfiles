@@ -1,0 +1,1 @@
+['bash', 'xmodmap', 'keycode', 'Down', 'echo', 'rofi', '-sep', '-dmenu', 'Exit', '-lines', '-columns', '-separator-style', 'solid', '-location', '-width', '-hide-scrollbar', '-padding', '-font', 'Mono', '-scroll-method', 'Right', 'Left', 'then', 'lock.sh', 'i3-msg', 'exit', 'systemctl', 'hibernate', 'reboot', 'poweroff']

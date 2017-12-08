@@ -1,0 +1,1 @@
+['linux', 'init', 'shared', 'fPIC', 'lsocklib', 'ROOTDIR', 'include', 'ksocket', 'ldboplib', 'lkayakDBOp', 'echo', 'define', '_VERSION_', 'date', 'version']

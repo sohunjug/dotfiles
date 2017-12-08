@@ -1,0 +1,1 @@
+['from', 'bterapi', 'import', 'common', 'class', 'Ticker', '_market_data', '__init__', 'self', 'pairs', 'all_pairs', 'pair', 'validatePair', '_pairs', '_all', 'update', 'connection', 'BTERConnection', 'makeJSONRequest', 'tickers', 'method', 'else', 'dict', 'ticker', '@property', 'return', 'market_data']

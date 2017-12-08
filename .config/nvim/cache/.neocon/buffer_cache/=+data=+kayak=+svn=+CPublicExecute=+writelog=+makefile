@@ -1,0 +1,1 @@
+['writefile', 'write.cpp', '-Iinclude', '-lnanomsg', 'kklogd', 'kklogd.cpp', 'push', 'pushtest.cpp', 'push1', 'push1.cpp', 'push2', 'push2.cpp']

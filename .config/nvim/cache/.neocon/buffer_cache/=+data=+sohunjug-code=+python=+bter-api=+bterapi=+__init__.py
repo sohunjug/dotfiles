@@ -1,0 +1,1 @@
+['Copyright', 'Alan', 'McIntyre', 'from', 'bterapi', 'public', 'import', 'getDepth', 'getTradeHistory', 'trade', 'TradeAPI', 'keyhandler', 'KeyHandler', 'common', 'all_currencies', 'all_pairs', 'max_digits', 'formatCurrency', 'fees', 'formatCurrencyDigits', 'truncateAmount', 'truncateAmountDigits', 'BTERConnection']

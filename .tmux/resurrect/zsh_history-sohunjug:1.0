@@ -1,0 +1,64 @@
+pkillall netease
+cat /usr/bin/pkillal
+cat /usr/bin/pkillall
+kill -9 $(ps -ef | grep netease | grep -v grep | awk '{print $2}')
+ps -ef | grep terminal
+ps -ef | grep pantheon
+kill -9 32641
+p yaourt -S deepin-terminal
+floating --help
+p yaourt -Rc rofi
+vi .config/i3/confif
+vi .config/i3/config
+p yaourt -Ss quickswitch
+p yaourt -S quickswitch-i3
+p yaourt -S xss-lock
+xss-lock -- blurlock
+su
+ls
+cd Documents
+ls
+cd dotfiles
+ls
+cd 
+ls
+vi .zshrc
+ls
+cd 
+ls
+sudo su
+chsh -s zsh
+chsh -s /bin/zsh
+exit
+work
+source .aliases
+work
+vi .zshrc
+ls
+t
+vi .zshrc
+source .zshrc
+t
+history -r '/home/sohunjug/.tmux/resurrect/bash_history-sohunjug:1.0'
+t
+ls
+yaourt -S lightdm-webkit2-geeter
+yaourt -S lightdm-webkit2-greeter
+yaourt -S ntfs-3g
+yaourt -S lightdm-gtk-greeter-settings
+lightdm-settings
+dm-tool lock
+lightdm --test-mode --debug
+yaourt -Ss lightdm-webkit
+yaourt -S lightdm-webkit2-theme-material2
+sudo pacman -S lightdm-webkit2-greeter-manjaro-dark
+yaourt -S lightdm-webkit2-greeter-manjaro-dark
+yaourt -Ss lightdm-webkit2-greeter-manjaro-dark
+yaourt -Ss lightdm-webkit2-greeter
+yaourt -Ss lightdm-webkit2
+ls /etc/lightdm
+ls /usr/share/xgreeters
+lightdm-settings
+lightdm-gtk-greeter
+yaourt -S lightdm-gtk-greeter-settings
+dm-tool lock

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo $(hostname)
+echo $(hostname)
+
+if [ "${BLOCK_BUTTON}" -gt 0 ]; then
+   sudo systemctl suspend
+fi

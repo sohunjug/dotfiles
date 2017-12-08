@@ -1,0 +1,495 @@
+#!作者：vachester
+#!时间：2016/07/04
+#!邮箱：chester@hit.edu.cn
+
+
+#************************************基本设置*******************************************
+#设置基本的工作区和热键(win)
+set $mod Mod4
+
+#背景和文字
+exec --no-startup-id xrdb -load ~/.Xresources
+exec --no-startup-id synergys -c ~/.synergy.conf
+#exec_always --no-startup-id feh --bg-scale "/home/sohunjug/Pictures/background2.jpg" --xinerama-index 0
+exec_always --no-startup-id feh --bg-scale "/home/sohunjug/Pictures/background3.jpg"
+font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font pango:Monospace 9
+
+#floating模式下按住alt键进行拉拽
+floating_modifier Mod1
+
+#prt sc键进行选择性截屏，并且保存在~/Pictures/shot/目录下
+bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
+bindsym $mod+Print exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
+
+bindsym $mod+d exec --no-startup-id rofi -show run -width 400 -lines 5 -font "Ohsnap 9" -hide-scrollbar -glob -separator-style "dash"
+#退出当前程序
+bindsym $mod+z exec --no-startup-id luakit $HOME/.start.html
+
+bindsym $mod+Shift+q kill
+#切换到水平模式
+bindsym $mod+b split h
+#切换到垂直模式
+bindsym $mod+v split v
+#全屏
+bindsym $mod+f fullscreen toggle
+#切换到floating模式
+bindsym $mod+Shift+space floating toggle
+#聚焦于浮动模式下的窗口
+bindsym $mod+space focus mode_toggle
+#聚焦与父布局
+bindsym $mod+a focus parent
+#三种模式的切换
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+#重载文件
+bindsym $mod+Shift+c reload
+#重启i3
+bindsym $mod+Shift+r restart
+#退出i3
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec ~/.config/i3/shutdown
+#隐藏窗口
+bindsym $mod+Shift+minus move scratchpad
+#显示被隐藏的窗口
+bindsym $mod+minus scratchpad show
+#去掉屏保功能，将黑屏等待时间置为100分钟
+exec_always --no-startup-id xset s 0
+exec_always --no-startup-id xset dpms 0 0 600
+
+#********************************************更改窗口尺寸**************************
+mode "resize" {
+        bindsym h resize shrink width 15 px or 15 ppt
+        bindsym j resize grow height 30 px or 15 ppt
+        bindsym k resize shrink height 15 px or 15 ppt
+        bindsym l resize grow width 15 px or 15 ppt
+
+        bindsym Left resize shrink width 10 px or 10 ppt
+        bindsym Down resize grow height 10 px or 10 ppt
+        bindsym Up resize shrink height 10 px or 10 ppt
+        bindsym Right resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+#*********************************************电源管理*****************************
+set $mode_system   (L)  (O)  (H)  (R)  (S)  (Esc)
+bindsym $mod+c mode "$mode_system"
+mode "$mode_system" {
+	bindsym l exec --no-startup-id ~/.local/bin/blurlock #-c '#000000', mode "default"
+	#bindsym l exec --no-startup-id i3lock-fancy, mode "default"
+	bindsym o exec --no-startup-id i3-msg exit, mode "default"
+	bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+	bindsym r exec --no-startup-id sudo reboot, mode "default"
+	bindsym s exec --no-startup-id sudo poweroff, mode "default"
+	bindsym Escape mode "default"
+}
+
+# Manual management of external displays
+set $mode_display Screen (1) VGA ON, (2) HDMI ON, (3) VGA OFF, (4) HDMI OFF
+mode "$mode_display" {
+	bindsym 1 exec --no-startup-id xrandr --output VGA-1 --auto --same-as eDP-1, mode "default"
+	bindsym 2 exec --no-startup-id xrandr --output HDMI-1 --auto --same-as eDP-1, mode "default"
+	bindsym 3 exec --no-startup-id xrandr --output VGA-1 --auto --off, mode "default"
+	bindsym 4 exec --no-startup-id xrandr --output HDMI-1 --auto --off, mode "default"
+
+	# back to normal: Enter or Escape
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+}
+bindsym $mod+F2 mode "$mode_display"
+
+
+#********************************************i3-gaps******************************
+# Border style
+new_window pixel 1
+new_float pixel 1
+for_window [class="^.*"] border pixel 1
+# smart_gaps on
+smart_borders on
+
+# Wal resources
+set_from_resources	$fg	i3wm.color7	#f0f0f0
+set_from_resources	$bg	i3wm.color2	#f0f0f0
+
+# Global gaps size
+gaps inner 0
+gaps outer 15
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+bindsym $mod+F10 exec --no-startup-id $HOME/.config/popups/power/power
+bindsym $mod+F11 exec --no-startup-id ~/.local/bin/themeswitcher
+bindsym $mod+F12 exec --no-startup-id ~/.config/popups/todo/todo
+bindsym $mod+q exec --no-startup-id lighthouse
+
+
+#打开的同时切换到tab模式
+#for_window [class="URxvt"] layout tabbed
+for_window [class="Nylas Mail" title="New Message"] floating enable
+#打开软件时自动移至相应工作区
+assign [class="URxvt"] $WS1
+assign [class="Thunar"] $WS1
+assign [class="Chrome"] $WS2
+assign [class="Shutter"] $WS8
+assign [class="Gvim"] $WS4
+assign [class="VirtualBox"] $WS12
+assign [class="Gimp"] $WS6
+assign [class="Nylas Mail"] $WS3
+assign [class="rdesktop"] $WS7
+
+#**************************************焦点和窗口移动**************************************
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Left workspace prev
+bindsym $mod+Right workspace next
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+#****************************************工作区操作*******************************
+bindsym $mod+1 workspace $WS1
+bindsym $mod+2 workspace $WS2
+bindsym $mod+3 workspace $WS3
+bindsym $mod+4 workspace $WS4
+bindsym $mod+5 workspace $WS5
+bindsym $mod+6 workspace $WS6
+bindsym $mod+7 workspace $WS7
+bindsym $mod+8 workspace $WS8
+bindsym $mod+9 workspace $WS9
+bindsym $mod+0 workspace $WS0
+bindsym $mod+Tab workspace back_and_forth
+
+bindsym $mod+shift+1 move container to workspace $WS1, workspace $WS1
+bindsym $mod+shift+2 move container to workspace $WS2, workspace $WS2
+bindsym $mod+shift+3 move container to workspace $WS3, workspace $WS3
+bindsym $mod+shift+4 move container to workspace $WS4, workspace $WS4
+bindsym $mod+shift+5 move container to workspace $WS5, workspace $WS5
+bindsym $mod+shift+6 move container to workspace $WS6, workspace $WS6
+bindsym $mod+shift+7 move container to workspace $WS7, workspace $WS7
+bindsym $mod+shift+8 move container to workspace $WS8, workspace $WS8
+bindsym $mod+shift+9 move container to workspace $WS9, workspace $WS9
+bindsym $mod+shift+0 move container to workspace $WS0, workspace $WS0
+bindsym $mod+Control+Left move workspace to output left
+bindsym $mod+Control+Right move workspace to output right
+
+
+# Custom colors
+set_from_resource $black       color8  #000000
+set_from_resource $darkblack   color0  #000000
+set_from_resource $darkred     color1  #000000
+set_from_resource $red         color9  #000000
+set_from_resource $darkgreen   color2  #000000
+set_from_resource $green       color10 #000000
+set_from_resource $darkyellow  color3  #000000
+set_from_resource $yellow      color11 #000000
+set_from_resource $darkblue    color4  #000000
+set_from_resource $blue        color12 #000000
+set_from_resource $darkmagenta color5  #000000
+set_from_resource $magenta     color13 #000000
+set_from_resource $darkcyan    color6  #000000
+set_from_resource $cyan        color14 #000000
+set_from_resource $white       color15 #000000
+
+# Window colors           border      background   text            indicator    child_border
+client.focused            $blue       $blue        $white          $darkblack  $darkblack
+client.focused_inactive   $darkblack  $darkblack   $white          $darkblack  $darkblack
+client.unfocused          $yellow     $yellow      $white          $darkblack  $darkblack
+client.urgent             $darkblack  $darkblack   $white          $darkblack  $darkblack
+
+
+for_window [class=".*"] title_format "<span font='tewi 8'> </span>"
+for_window [class="Arandr"] floating enable
+for_window [instance="dukto"] floating enable
+for_window [class="feh"] floating enable
+for_window [class="lighthouse"] floating enable
+for_window [class="Luakit"] floating enable, resize grow right 400px, resize grow left 400px, resize grow up 200px, resize grow down 160px;
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="Nitrogen"] floating enable
+for_window [class="Artha"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+#for_window [class="^.*"] floating enable
+
+exec --no-startup-id conky -c ~/.config/polybar/conky_wrapper -d
+exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc &
+exec --no-startup-id compton -b
+exec_always --no-startup-id ~/.local/bin/barstart
+
+
+for_window [class="appfinder" instance="appfinder"] floating enable
+bindsym F10 exec xfce4-appfinder
+bindsym $mod+Shift+Return exec xfce4-terminal
+bindsym $mod+Return exec --no-startup-id urxvt
+exec_always --no-startup-id fcitx
+exec_always --no-startup-id /home/sohunjug/.screenlayout/home.sh
+# exec_always --no-startup-id ~/.local/bin/synaptics
+
+
+
+# Status bar
+# bindsym $mod+m bar mode invisible
+# bindsym $mod+Shift+M bar mode dock
+#
+
+set $WS1  1: Terminal
+set $WS2  2: Brower
+set $WS3  3: Email
+set $WS4  4: Coding
+set $WS5  5: Music
+set $WS6  6: Movie
+set $WS7  7: Remote
+set $WS8  8: Shutter
+set $WS9  9: Setting
+set $WS0 10: Chat
+set $WS11 11: Note
+set $WS12 12: 
+set $WS12 12: 
+set $WS13 13: 
+set $WS14 14: 
+set $WS15 15: 
+
+# Pulse Audio controls
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id "BLOCK_BUTTON=1 /home/sohunjug/.config/i3/blocks/volume"
+bindsym XF86AudioLowerVolume exec --no-startup-id "BLOCK_BUTTON=3 /home/sohunjug/.config/i3/blocks/volume"
+bindsym XF86AudioMute exec --no-startup-id "BLOCK_BUTTON=2 /home/sohunjug/.config/i3/blocks/volume"
+bindsym XF86AudioMicMute exec --no-startup-id "BLOCK_BUTTON=6 /home/sohunjug/.config/i3/blocks/volume"
+
+# Sreen brightness controls
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
+bindsym XF86AudioPlay exec "playerctl play"
+bindsym XF86AudioPause exec "playerctl pause"
+bindsym XF86AudioNext exec "playerctl next"
+bindsym XF86AudioPrev exec "playerctl previous"
+
+#######一些常见绑定
+#bindsym Print exec shutter -s -o ~/Pictures/shot/%Y-%m-%d-%T.png 
+#bindsym Print exec shutter -s # capture selection
+#bindsym $mod+Print exec shutter -f # capture selection
+#bindsym Shift+Print exec shutter -r # capture selection
+#for_window [class="Shutter" instance="shutter"] floating enable
+#for_window [class="Quickswitch" instance="quickswitch"] floating enable
+
+
+
+
+#运行dmenu
+#bindsym $mod+d exec dmenu_run
+# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -b -nb '#121212' -sb '#a1a1a1' -sf '#010101' -fn 'Terminus-11' -l 10"
+#bindsym $mod+d exec j4-dmenu-desktop
+
+
+#win+enter运行urxvt(透明度为40)
+#bindsym $mod+Return exec urxvt -sh 44
+#bindsym $mod+Return exec tlida
+
+######一些软件设置
+#开机自起compton
+# exec --no-startup-id xss-lock -- blurlock
+
+#开机自起fcitx
+#exec_always --no-startup-id clipit
+# exec_always --no-startup-id qlipper
+# exec_always --no-startup-id nm-applet
+#exec --no-startup-id nylas
+#exec --no-startup-id shutter --min_at_startup
+
+#exec_always --no-startup-id xrandr --output HDMI2 --primary --right-of eDP1 --auto
+#exec_always --no-startup-id xinput --set-prop 15 "Synaptics Two-Finger Scrolling" 1 1
+#exec_always --no-startup-id xinput --set-prop 15 "Synaptics Scrolling Distance" -116 -116
+#exec_always --no-startup-id xinput --set-prop 15 "Synaptics Palm Detection" 1
+#exec_always --no-startup-id xinput --set-prop 15 "Synaptics Grab Event Device" 0
+#exec_always --no-startup-id xinput --set-prop 11 "Synaptics Two-Finger Scrolling" 1 1
+#exec_always --no-startup-id xinput --set-prop 11 "Synaptics Scrolling Distance" -116 -116
+#exec_always --no-startup-id xinput --set-prop 11 "Synaptics Palm Detection" 1
+#exec_always --no-startup-id xinput --set-prop 11 "Synaptics Grab Event Device" 0
+
+
+
+
+
+
+
+
+# bindsym $mod+Control+1 workspace $WS11
+# bindsym $mod+Control+2 workspace $WS12
+# bindsym $mod+Control+3 workspace $WS13
+# bindsym $mod+Control+4 workspace $WS14
+# bindsym $mod+Control+5 workspace $WS15
+
+
+# bindsym $mod+Control+shift+1 move container to workspace $WS11, workspace $WS11
+# bindsym $mod+Control+shift+2 move container to workspace $WS12, workspace $WS12
+# bindsym $mod+Control+shift+3 move container to workspace $WS13, workspace $WS13
+# bindsym $mod+Control+shift+4 move container to workspace $WS14, workspace $WS14
+# bindsym $mod+Control+shift+5 move container to workspace $WS15, workspace $WS15
+
+
+
+
+
+#**************************************************主题设置*********************************************
+# 窗口颜色                边框    背景    文字    提示
+# client.focused          #333333 #333333 #FFFFFF #333333
+# client.focused_inactive #999999 #999999 #FFFFFF #3399FF
+# client.unfocused        #999999 #999999 #FFFFFF #3399FF
+# client.urgent           #990000 #990000 #FFFFFF #990000
+# client.placeholder      #000000 #000000 #FFFFFF #000000
+# client.background       #FFFFFF
+
+#i3bar设置
+# bar {
+    # i3bar_command i3bar -t
+    # height 28
+    # #禁止systemtray
+    # tray_output primary
+    # # i3bar调用
+    # status_command ~/.config/i3/jconky
+    # # 显示位置top/bottom
+    # position bottom
+    # # 是否隐藏
+    # #mode hide
+    # # 拆解工作区名（隐藏前面的1:2:3:……）
+    # strip_workspace_numbers yes
+    # # 定义分隔符∥
+    # separator_symbol "    "
+
+    # colors {
+        # background #10101000
+        # statusline #FFFFFF
+        # separator  #3399FF
+        # # 工作区颜色         边框    背景    文字
+        # focused_workspace  #3297FD #11111100 #FFFFFF
+        # active_workspace   #FFFFFF #FFFFFF00 #FFFFFF
+        # inactive_workspace #111111 #11111100 #FFFFFF
+        # urgent_workspace   #990000 #11111100 #FFFFFF
+        # binding_mode       #990000 #99000000 #FFFFFF
+    # }
+# }
+
+# bar {
+    # i3bar_command i3bar -t
+    # height 28
+    # #禁止systemtray
+    # #tray_output output
+    # tray_output primary
+    # # i3bar调用
+    # status_command i3blocks -c ~/.config/i3/i3blocks_bottom
+    # # 显示位置top/bottom
+    # position bottom
+    # # 是否隐藏
+    # #mode hide
+    # # 拆解工作区名（隐藏前面的1:2:3:……）
+    # strip_workspace_numbers yes
+    # # 定义分隔符∥
+    # separator_symbol "  "
+
+    # colors {
+        # background #10101000
+        # statusline #FFFFFF
+        # separator  #3399FF
+        # # 工作区颜色         边框    背景    文字
+        # focused_workspace  #3297FD #11111100 #FFFFFF
+        # active_workspace   #FFFFFF #FFFFFF00 #FFFFFF
+        # inactive_workspace #111111 #11111100 #FFFFFF
+        # urgent_workspace   #990000 #11111100 #FFFFFF
+        # binding_mode       #990000 #99000000 #FFFFFF
+    # }
+# }
+
+# bar {
+    # tray_output none
+    # workspace_buttons no
+    # position top
+    # status_command i3blocks -c ~/.config/i3/i3blocks_top
+
+    # colors {
+        # background #000000
+        # statusline #ffffff
+        # separator #666666
+
+        # focused_workspace  #4c7899 #285577 #ffffff
+        # active_workspace   #333333 #5f676a #ffffff
+        # inactive_workspace #333333 #222222 #888888
+        # urgent_workspace   #2f343a #900000 #ffffff
+        # binding_mode       #2f343a #900000 #ffffff
+    # }
+# }
+
+
+
+# bar {
+     # colors {
+			 # statusline #FFFFFF
+                 # background #000000
+						# #Border #Backgr #Font
+			 # focused_workspace  #000000 #FFFFFF #000000
+                   # active_workspace   #000000 #000000 #FFFFFF
+                   # inactive_workspace #000000 #000000 #FFFFFF
+                   # urgent_workspace   #000000 #CB4F29 #FFFFFF
+	# }
+			# status_command conky -c ~/.config/i3/conkyrc
+            # tray_output no
+               # position bottom
+			# workspace_buttons yes
+            # mode invisible
+# }
+
+#vim:filetype=i3

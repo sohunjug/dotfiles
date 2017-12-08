@@ -1,0 +1,1 @@
+['Minimal', 'CMake', 'project', 'building', 'static', 'library', 'under', 'Windows', 'cmake_minimum_required', 'VERSION', 'yaml', 'YAML_VERSION_MAJOR', 'YAML_VERSION_MINOR', 'YAML_VERSION_PATCH', 'YAML_VERSION_STRING', 'file', 'GLOB', 'include_directories', 'include', 'win32', 'add_definitions', 'DHAVE_CONFIG_H', 'DYAML_DECLARE_SHARED', 'add_library', 'SHARED']

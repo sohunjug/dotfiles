@@ -1,0 +1,28 @@
+#!/bin/bash
+
+interface=$(nmcli con show | grep kayakwise | grep vpn | grep -v grep | awk '{print $4}')
+if [[ $interface == "--" ]]; then
+   state=1
+else
+   state=0
+fi
+
+if [[ "${BLOCK_BUTTON}" -eq 1 || "${BLOCK_BUTTON}" -eq 3 ]]; then
+   if [ $state -eq 1 ]; then
+      nmcli con up kayakwise &
+      state=0
+   else
+      nmcli con down kayakwise &
+      state=1
+   fi
+   interface=$(nmcli con show | grep kayakwise | grep vpn | grep -v grep | awk '{print $4}')
+fi
+
+if [ $state -eq 1 ]; then
+   echo ""
+   echo ""
+else
+   echo ""
+   echo ""
+fi
+

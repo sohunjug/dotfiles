@@ -1,0 +1,1 @@
+['python', 'import', 'imaplib', 'from', 'accounts', 'IMAP4_SSL', 'imap', 'gmail', 'login', 'main_email', 'main_password', 'select', 'mail_no', 'search', 'None', 'UnSeen', 'split', 'print', 'mail', 'else', 'format', 'except', 'pass']

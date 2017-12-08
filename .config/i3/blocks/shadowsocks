@@ -1,0 +1,32 @@
+#!/bin/bash
+
+INDEX=$(expr index ${BLOCK_INSTANCE} '.')
+CONFIG=$(echo ${BLOCK_INSTANCE:0:$[INDEX-1]} | tr A-Z a-z)
+if [[ "${BLOCK_BUTTON}" -eq 2 ]]; then
+   sudo systemctl restart shadowsocks@${CONFIG}
+elif [[ "${BLOCK_BUTTON}" -eq 1 || "${BLOCK_BUTTON}" -eq 3 ]]; then
+   if [[ $(ps -ef | grep sslocal | grep ${BLOCK_INSTANCE} | grep -v grep | wc -l) -eq 1 ]]; then
+      stat=1
+      sudo systemctl stop shadowsocks@${CONFIG}
+   else
+      stat=0
+      sudo systemctl start shadowsocks@${CONFIG}
+   fi
+fi
+
+if [[ $(ps -ef | grep sslocal | grep ${BLOCK_INSTANCE} | grep -v grep | wc -l) -eq 1 ]]; then
+   stat=1
+else
+   stat=0
+fi
+
+BUFFER=$(echo $CONFIG | tr a-z A-Z)
+
+if [[ $stat -eq 1 ]]; then
+   echo " ${BUFFER}"
+   echo " ${BUFFER}"
+else
+   echo " ${BUFFER}"
+   echo " ${BUFFER}"
+fi
+

@@ -1,0 +1,1 @@
+['CFLAG', '-I..', 'ROOTDIR', 'include', 'LDFLAG', '-L..', 'OBJ1', 'testfile', 'clean', 'testfile.c', '-lcapi', '-lcrypto', '-lpthread', '-ldl', 'lualib', 'init', '-shared', '-fPIC', 'capilib.so', 'lcapi.c', 'echo', 'define', '_VERSION_', 'date', 'version.h', 'make']

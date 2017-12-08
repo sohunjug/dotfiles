@@ -1,0 +1,177 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# background
+# border
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=/home/sohunjug/.config/i3/blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+#
+
+[mediaplayer]
+label=
+color=#80989c
+#instance=spotify
+#instance=rhythmbox
+interval=5
+
+[email-gmail]
+command=/home/sohunjug/.config/i3/blocks/email
+label=
+instance=gmail
+interval=60
+color=#23459c
+
+[email-hotmail]
+command=/home/sohunjug/.config/i3/blocks/email
+label=
+instance=hotmail
+interval=60
+color=#52889a
+
+[email-kayak]
+command=/home/sohunjug/.config/i3/blocks/email
+label=
+instance=kayak
+interval=60
+color=#a1349c
+
+[weather]
+color=#aa341c
+instance=1795565
+interval=60
+
+[worldip]
+label=
+interval=60
+color=#7a9e0f
+
+[brightness]
+label=
+interval=5
+color=#ac8c8c
+
+[microphone]
+color=#888c8c
+interval=5
+
+[volume]
+#label=VOL
+#label=♪
+color=#8c189c
+instance=Master
+#instance=PCM
+interval=1
+signal=10
+
+# Disk usage
+#
+# The directory defaults to $HOME if the instance is not specified.
+# The script may be called with a optional argument to set the alert
+# (defaults to 10 for 10%).
+[disk]
+label=
+color=#8c1c1c
+#instance=/mnt/data
+interval=30
+#separator=true
+#separator_block_width=9
+#border=#1990B7
+#border_top=0
+#border_right=0
+#border_left=0
+#border_bottom=2
+
+
+
+# Memory usage
+#
+# The type defaults to "mem" if the instance is not specified.
+[memory]
+label=
+#separator=false
+color=#bc8c1c
+interval=30
+#border=#1990B7
+#border_top=0
+#border_right=0
+#border_left=0
+#separator_block_width=9
+#border_bottom=2
+
+[memory]
+label=
+instance=swap
+color=#ac8c8c
+#separator=false
+interval=30
+#border=#1990B7
+#border_top=0
+#border_right=0
+#border_left=0
+#separator_block_width=9
+#border_bottom=2
+
+[date]
+label=
+color=#ff797b
+interval=10
+
+[time]
+label=
+color=#8badf9
+interval=repeat
+
+[vpn]
+label=
+color=#1af8ff
+interval=5
+
+[shadowsocks]
+color=#0048ff
+instance=hk.json
+interval=10
+
+[shadowsocks]
+color=#0048ff
+instance=us.json
+interval=10
+
+[uptime]
+label=
+color=#5048ff
+interval=10
+
+[lock]
+label=
+color=#811df9
+interval=10

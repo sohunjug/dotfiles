@@ -1,0 +1,18 @@
+#!/bin/bash
+
+HOUR=$(date +'%H')
+
+if [[ $((10#$HOUR)) -gt "8" && $((10#$HOUR)) -lt 16 ]]; then
+    if [[ -f /tmp/token.${HOUR} ]]; then
+        TOKEN=$(jq -r '.token' /tmp/token.${HOUR})
+    else
+        RES=$(curl http://sohunjug.com:8002/login --data '{"session": "1yNlDN3n9aHabOHZ96LuT0UHkZ3r5ADV"}')
+        TOKEN=$(echo $RES | jq -r '.token')
+        echo $RES > /tmp/token.${HOUR}
+    fi
+    RESP=$(curl http://sohunjug.com:8002/account --header "Authorization: $TOKEN")
+    TODAY=$(echo $RESP | jq -r '.TodayProfit')
+
+    echo " $TODAY"
+    echo " $TODAY"
+fi

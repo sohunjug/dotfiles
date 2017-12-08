@@ -1,0 +1,117 @@
+##### THIS FILE IS BEING CURRENTLY MANAGED BY URXVTCONFIG #####
+##### CHANGES DONE TO THIS FILE MANUALLY MAY AFFECT THE FUNCTIONALITY ######
+##### PROCEED WITH CAUTION! #####
+
+
+
+!    ░█  █░                                                               
+!     ▓▒▒▓   █▒██▒  ███   ▒███▒   ███   █   █   █▒██▒  ▓██▒   ███   ▒███▒ 
+!      ██    ██  █ ▓▓ ▒█  █▒ ░█  █▓ ▓█  █   █   ██  █ ▓█  ▓  ▓▓ ▒█  █▒ ░█ 
+!      ██    █     █   █  █▒░    █   █  █   █   █     █░     █   █  █▒░   
+!     ▒██░   █     █████  ░███▒  █   █  █   █   █     █      █████  ░███▒ 
+!     █▒▒█   █     █         ▒█  █   █  █   █   █     █░     █         ▒█ 
+!    ▒█  █░  █     ▓▓  █  █░ ▒█  █▓ ▓█  █▒ ▓█   █     ▓█  ▓  ▓▓  █  █░ ▒█ 
+!    █▒  ▒█  █      ███▒  ▒███▒   ███   ▒██▒█   █      ▓██▒   ███▒  ▒███▒                                                                       
+                                                                      
+
+!-----------------------------------------------------------------------
+!                         Xft settings
+!-----------------------------------------------------------------------
+
+Xft.dpi:                96
+Xft.autohint:           0
+Xft.antialias:          true
+Xft.rgba:               rgb
+Xft.hinting:            true
+Xft.lcdfilter:          lcddefault
+Xft.hintstyle:          hintsfull
+
+
+!-----------------------------------------------------------------------
+!                        URxvt settings
+!-----------------------------------------------------------------------
+
+URxvt.internalBorder:    1
+URxvt.externalBorder:    1
+!URxvt.lineSpace:        0
+urxvt*shading:           30
+URxvt.depth:             32
+URxvt.saveLines:         10000
+URxvt.geometry:          80x24
+!URxvt*terminalName:      rxvt-unicode-256color
+URxvt*terminalName:      xterm-256color
+URxvt*visualBell:        false
+URxvt.preeditType:       Root
+URxvt.inputMethod:       fcitx
+
+!! Scrollbar
+URxvt.scrollStyle:       rxvt
+URxvt.scrollBar:         false
+URxvt*scrollTtyOutput:   false
+URxvt*scrollWithBuffer:  true
+URxvt*scrollTtyKeypress: true
+
+!! Fonts
+#define fonts \
+              xft:Dejavu Sans Mono:size=10:antialias=True,\
+              xft:Monospace:size=10:style=Regular,\
+              xft:WenQuanYi Zen Hei Mono:size=10:antialias=True
+
+
+URxvt.utf8:             true
+URxvt.font:              fonts
+URxvt.imFont:            -bitstream-bitstream charter-medium-r-normal-*-0-0-0-0-p-0-iso10646-1
+URxvt.boldMode:          false
+URxvt.boldFont:          fonts
+URxvt.borderLess:        false
+
+URxvt.inheritPixmap:     true
+URxvt.tintColor:         grey
+URxvt.letterSpace:       false
+
+!! Keybinding
+URxvt.keysym.C-Up:       perl:font-size:increase
+URxvt.keysym.C-Down:     perl:font-size:decrease
+URxvt.keysym.C-S-Up:     perl:font-size:incglobal
+URxvt.keysym.C-S-Down:   perl:font-size:decglobal
+!Home and End keys to jump to the beginning and end of lines
+URxvt*keysym.Home:       \033[1~
+URxvt*keysym.End:        \033[4~
+
+!! Tabs
+URxvt.tabbed.tabbar-bg:  -1
+URxvt.tabbed.tabbar-fg:  -2
+URxvt.tabbed.tab-bg:     -2
+URxvt.tabbed.tab-fg:     -1
+URxvt.tabbed.title-bg:   -1
+URxvt.tabbed.title-fg:   -2
+URxvt.tabbed.autohide:   true
+URxvt.tabbed.new-button: false
+URxvt.tabbed.title:      true
+
+!! Perl extensions
+! url-select (part of urxvt-perls package)
+URxvt.perl-ext-common:      default,clipboard,matcher,keyboard-select,url-select,selection-to-clipboard
+URxvt.keysym.M-u: perl:     url-select:select_next
+URxvt.url-select.autocopy:  true
+URxvt.url-select.button:    2
+URxvt.url-select.underline: true
+URxvt.url-launcher:         /usr/bin/luakit
+URxvt.matcher.button:       1
+
+! URxvt.copyCommand:  xclip -i -selection clipboard
+! URxvt.pasteCommand: xclip -o -selection clipboard
+
+!! CopyPaste Keys
+URxvt.keysym.Shift-Control-V:   perl:clipboard:paste
+URxvt.keysym.Shift-Control-C:   perl:clipboard:copy
+
+!! Disable the stupid ctrl+shift 'feature'
+URxvt.iso14755:            false
+URxvt.iso14755_52:         false
+
+!! Cursor
+Xcursor.theme:             Paper
+
+!! Colors
+#include "/home/sohunjug/.colors/solarized.light"

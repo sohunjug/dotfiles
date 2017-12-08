@@ -1,0 +1,10 @@
+pane	sohunjug	1	:mpp	1	:*Z	0	:/data/Code/sohunjug-code/mpp-apiserver	1	bash	:
+pane	sohunjug	1	:mpp	1	:*Z	1	:/home/sohunjug	0	bash	:
+pane	sohunjug	2	:bash	0	:#!	0	:/home/sohunjug	1	bash	:
+pane	sohunjug	3	:bash	0	:#!-	0	:/home/sohunjug	1	bash	:
+pane	sohunjug	4	:bash	0	:#!	0	:/home/sohunjug	1	bash	:
+window	sohunjug	1	1	:*Z	e16f,209x57,0,0{104x57,0,0,0,104x57,105,0,1}
+window	sohunjug	2	0	:#!	cd1f,209x57,0,0,2
+window	sohunjug	3	0	:#!-	cd20,209x57,0,0,3
+window	sohunjug	4	0	:#!	cd21,209x57,0,0,4
+state	sohunjug	

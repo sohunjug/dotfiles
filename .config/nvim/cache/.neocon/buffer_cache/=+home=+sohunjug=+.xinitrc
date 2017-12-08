@@ -1,0 +1,1 @@
+['start', 'some', 'nice', 'programs', 'xinit', 'xinitrc.d', 'then', 'done', 'unset', 'conky', '.config', 'polybar', 'conky_wrapper', 'wrapper', 'nitrogen', '--restore', 'restore', 'wallpaper', 'compton', '--config', '.compton.conf', 'dunst', '-config', 'HOME', 'dunstrc', 'xrdb', '-load', '.Xresources', '.local', 'urxvt_daemon', 'urxvt', 'daemon', 'exec']

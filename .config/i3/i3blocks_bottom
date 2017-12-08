@@ -1,0 +1,95 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# background
+# border
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=/home/sohunjug/.config/i3/blocks/$BLOCK_NAME
+separator_block_width=20
+markup=none
+
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+#
+
+# The type defaults to "mem" if the instance is not specified.
+[wireless]
+instance=wlp3s0
+color=#94f397
+interval=1.5
+
+#[stock]
+#color=#656565
+#interval=5
+
+#[bter]
+#label=
+#color=#561116
+#interval=10
+
+#[jubi]
+#label=
+#color=#115616
+#interval=3
+
+[cpu]
+label=
+color=#8bc3e7
+interval=10
+
+[memory]
+label=
+#separator=false
+color=#bc8c1c
+interval=30
+
+[memory]
+label=
+instance=swap
+color=#ac8c8c
+#separator=false
+interval=30
+
+[temperature]
+label=
+color=#baba55
+interval=5
+
+[fan]
+label=
+color=#1aba55
+interval=5
+
+[battery]
+color=#a4dc6a
+interval=5
+
+[packages]
+label=
+color=#af1c6a
+interval=5

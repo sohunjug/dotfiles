@@ -1,0 +1,8 @@
+#!/bin/bash
+
+ID=$(xinput list | grep Synaptics | awk '{ print $6 }' | awk -F= '{ print $2 }')
+
+xinput --set-prop $ID "Synaptics Two-Finger Scrolling" 1 1
+xinput --set-prop $ID "Synaptics Scrolling Distance" -116 -116
+xinput --set-prop $ID "Synaptics Palm Detection" 1
+xinput --set-prop $ID "Synaptics Grab Event Device" 1
